@@ -1,0 +1,10 @@
+{
+  "title": "Bestiary",
+  "root": true,
+  "pages": [
+    "index",
+    "---Monsters A-Z---",
+    "aboleth",
+    "adult-red-dragon"
+  ]
+}

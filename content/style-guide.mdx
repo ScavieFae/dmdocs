@@ -1,0 +1,401 @@
+---
+title: Style Guide
+description: Visual reference for typography, components, and patterns
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Callout } from 'fumadocs-ui/components/callout';
+
+This page shows all styling elements in one place for comparison and iteration.
+
+---
+
+## Color Palette
+
+Accent colors are set per-section via CSS custom properties. HSL format: `H S% L%`
+
+### Current Accents
+
+<div className="space-y-2 my-4">
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(48, 85%, 48%)" }} />
+    <span className="font-medium w-28">Brand</span>
+    <span className="w-20">Gold</span>
+    <code className="text-sm">48 85% 48%</code>
+    <span className="text-fd-muted-foreground text-sm">Navbar, homepage, default</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(48, 85%, 48%)" }} />
+    <span className="font-medium w-28">Rules</span>
+    <span className="w-20">Gold</span>
+    <code className="text-sm">48 85% 48%</code>
+    <span className="text-fd-muted-foreground text-sm">Main documentation</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(5, 80%, 45%)" }} />
+    <span className="font-medium w-28">Bestiary</span>
+    <span className="w-20">Blood Red</span>
+    <code className="text-sm">5 80% 45%</code>
+    <span className="text-fd-muted-foreground text-sm">Monster reference</span>
+  </div>
+</div>
+
+### Artifact Palette (Current)
+
+Muted, desaturated colors that feel like a wizard's study.
+
+<div className="space-y-2 my-4">
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(48, 85%, 48%)" }} />
+    <span className="font-medium w-32">Gold</span>
+    <code className="text-sm">48 85% 48%</code>
+    <span className="text-fd-muted-foreground text-sm">Vibrant gold, current brand</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(350, 55%, 40%)" }} />
+    <span className="font-medium w-32">Burgundy Wine</span>
+    <code className="text-sm">350 55% 40%</code>
+    <span className="text-fd-muted-foreground text-sm">Medieval, rich, dangerous</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(18, 70%, 45%)" }} />
+    <span className="font-medium w-32">Burnt Sienna</span>
+    <code className="text-sm">18 70% 45%</code>
+    <span className="text-fd-muted-foreground text-sm">Earthy, leather-bound tomes</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(185, 50%, 35%)" }} />
+    <span className="font-medium w-32">Deep Teal</span>
+    <code className="text-sm">185 50% 35%</code>
+    <span className="text-fd-muted-foreground text-sm">Mysterious, not the typical tech blue</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(90, 40%, 35%)" }} />
+    <span className="font-medium w-32">Moss</span>
+    <code className="text-sm">90 40% 35%</code>
+    <span className="text-fd-muted-foreground text-sm">Earthy green, very un-Tailwind</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(30, 50%, 38%)" }} />
+    <span className="font-medium w-32">Antique Bronze</span>
+    <code className="text-sm">30 50% 38%</code>
+    <span className="text-fd-muted-foreground text-sm">Warm neutral, artifact feel</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(270, 35%, 45%)" }} />
+    <span className="font-medium w-32">Dusty Violet</span>
+    <code className="text-sm">270 35% 45%</code>
+    <span className="text-fd-muted-foreground text-sm">Arcane, aged magic</span>
+  </div>
+</div>
+
+### Game Rarity Colors (WoW/Blizzard/WotC Convention)
+
+Classic item rarity colors - instantly recognizable to gamers.
+
+<div className="space-y-2 my-4">
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(0, 0%, 62%)" }} />
+    <span className="font-medium w-32">Common</span>
+    <code className="text-sm">0 0% 62%</code>
+    <span className="text-fd-muted-foreground text-sm">Gray, basic items</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(120, 60%, 45%)" }} />
+    <span className="font-medium w-32">Uncommon</span>
+    <code className="text-sm">120 60% 45%</code>
+    <span className="text-fd-muted-foreground text-sm">Green, slightly better</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(220, 80%, 55%)" }} />
+    <span className="font-medium w-32">Rare</span>
+    <code className="text-sm">220 80% 55%</code>
+    <span className="text-fd-muted-foreground text-sm">Blue, quality gear</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(280, 70%, 55%)" }} />
+    <span className="font-medium w-32">Epic</span>
+    <code className="text-sm">280 70% 55%</code>
+    <span className="text-fd-muted-foreground text-sm">Purple, powerful items</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(35, 100%, 50%)" }} />
+    <span className="font-medium w-32">Legendary</span>
+    <code className="text-sm">35 100% 50%</code>
+    <span className="text-fd-muted-foreground text-sm">Orange, iconic loot</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(45, 100%, 60%)" }} />
+    <span className="font-medium w-32">Artifact</span>
+    <code className="text-sm">45 100% 60%</code>
+    <span className="text-fd-muted-foreground text-sm">Gold, mythic tier</span>
+  </div>
+</div>
+
+**Monster/Enemy Reds:**
+
+<div className="space-y-2 my-4">
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(5, 80%, 45%)" }} />
+    <span className="font-medium w-32">Blood Red</span>
+    <code className="text-sm">5 80% 45%</code>
+    <span className="text-fd-muted-foreground text-sm">Deep, visceral, Diablo-esque</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(0, 75%, 50%)" }} />
+    <span className="font-medium w-32">Danger Red</span>
+    <code className="text-sm">0 75% 50%</code>
+    <span className="text-fd-muted-foreground text-sm">Classic enemy nameplate</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(355, 85%, 52%)" }} />
+    <span className="font-medium w-32">Crimson Bright</span>
+    <code className="text-sm">355 85% 52%</code>
+    <span className="text-fd-muted-foreground text-sm">Vibrant, hostile</span>
+  </div>
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(0, 70%, 55%)" }} />
+    <span className="font-medium w-32">WoW Hostile</span>
+    <code className="text-sm">0 70% 55%</code>
+    <span className="text-fd-muted-foreground text-sm">Enemy health bar red</span>
+  </div>
+</div>
+
+### Implementation
+
+Set in layout files via CSS variables:
+
+```tsx
+<div style={{
+  "--primary": "200 80% 55%",
+  "--primary-foreground": "0 0% 98%",
+} as React.CSSProperties}>
+```
+
+---
+
+## Typography
+
+### Heading Hierarchy
+
+## Heading 2 — Major Section
+### Heading 3 — Subsection
+#### Heading 4 — Detail Header
+
+### Body Text
+
+This is standard body text. It should be comfortable to read at length. The quick brown fox jumps over the lazy dog. **Bold text** draws attention to key terms. *Italic text* is used for flavor, emphasis, or game term categories.
+
+A second paragraph tests spacing between blocks. Lists, tables, and other elements should flow naturally from prose without excessive gaps.
+
+### Links
+
+Here is a [standard link](#) within body text, and here is a link to [another page](/docs/classes/barbarian).
+
+---
+
+## Lists
+
+### Unordered List
+
+- First item with brief content
+- Second item that spans multiple lines to show how wrapping behaves in the current typography settings
+- Third item
+  - Nested item one
+  - Nested item two
+- Fourth item
+
+### Ordered List
+
+1. First numbered item
+2. Second numbered item with more text to show line wrapping behavior
+3. Third numbered item
+   1. Nested numbered item
+   2. Another nested item
+
+### Definition-Style (Bold Lead)
+
+**Ability Score Increase.** Increase one ability score of your choice by 1, to a maximum of 20.
+
+**Damage Reduction.** When you're hit by an attack while wearing Heavy armor, any Bludgeoning, Piercing, or Slashing damage is reduced by your Proficiency Bonus.
+
+**Spellcasting Focus.** You can use an arcane focus as a spellcasting focus for your wizard spells.
+
+---
+
+## Tables
+
+### Simple Two-Column
+
+| Trait | Value |
+|-------|-------|
+| Primary Ability | Strength |
+| Hit Die | d12 |
+| Saving Throws | Strength, Constitution |
+
+### Multi-Column Data Table
+
+| Level | Proficiency | Features | Rages | Damage |
+|-------|-------------|----------|-------|--------|
+| 1 | +2 | Rage, Unarmored Defense | 2 | +2 |
+| 2 | +2 | Danger Sense, Reckless Attack | 2 | +2 |
+| 3 | +2 | Barbarian Subclass, Primal Knowledge | 3 | +2 |
+| 4 | +2 | Ability Score Improvement | 3 | +2 |
+| 5 | +3 | Extra Attack, Fast Movement | 3 | +2 |
+
+### Spell Table Format
+
+| Spell | School | Special |
+|-------|--------|---------|
+| Fireball | Evocation | — |
+| Detect Magic | Divination | C, R |
+| Revivify | Necromancy | M |
+| Counterspell | Abjuration | — |
+
+---
+
+## Tabs Component
+
+<Tabs items={['Tab One', 'Tab Two', 'Tab Three']}>
+<Tab value="Tab One">
+
+Content inside the first tab. This is where tier-specific class features or species lineages would appear.
+
+### Subheading in Tab
+
+- List item in tab
+- Another list item
+
+</Tab>
+<Tab value="Tab Two">
+
+Content inside the second tab. Different content shows when this tab is selected.
+
+| Column A | Column B |
+|----------|----------|
+| Data 1 | Data 2 |
+| Data 3 | Data 4 |
+
+</Tab>
+<Tab value="Tab Three">
+
+Third tab content. Tabs should handle varying content heights gracefully.
+
+**Feature Name.** Description of the feature with enough text to wrap to a second line in most viewport widths.
+
+</Tab>
+</Tabs>
+
+---
+
+## Callouts
+
+<Callout title="Note" type="info">
+This is an informational callout for tips or clarifications.
+</Callout>
+
+<Callout title="Warning" type="warn">
+This is a warning callout for important cautions.
+</Callout>
+
+<Callout title="Error" type="error">
+This is an error callout for critical information.
+</Callout>
+
+---
+
+## Blockquotes
+
+> This is a blockquote, typically used for flavor text or quoted material from the source. It should be visually distinct but not overwhelming.
+
+---
+
+## Horizontal Rules
+
+Content above a horizontal rule.
+
+---
+
+Content below a horizontal rule. Rules separate major sections.
+
+---
+
+## Combined Example: Feat Entry
+
+### Great Weapon Master
+
+*General Feat (Prerequisite: Level 4+, Strength 13+)*
+
+You've learned to use the weight of a weapon to your advantage, granting you the following benefits:
+
+**Ability Score Increase.** Increase your Strength score by 1, to a maximum of 20.
+
+**Heavy Weapon Mastery.** When you hit a creature with a weapon that has the Heavy property as part of the Attack action on your turn, you can cause the weapon to deal extra damage to the target. The extra damage equals your Proficiency Bonus.
+
+**Hew.** Immediately after you score a Critical Hit with a Melee weapon or reduce a creature to 0 Hit Points with one, you can make one attack with the same weapon as a Bonus Action.
+
+---
+
+## Combined Example: Class Traits Table
+
+| Trait | Value |
+|-------|-------|
+| Primary Ability | Strength |
+| Hit Point Die | D12 per Barbarian level |
+| Saving Throw Proficiencies | Strength and Constitution |
+| Skill Proficiencies | Choose 2: Animal Handling, Athletics, Intimidation, Nature, Perception, or Survival |
+| Weapon Proficiencies | Simple and Martial weapons |
+| Armor Training | Light and Medium armor and Shields |
+| Starting Equipment | Choose A or B: (A) Greataxe, 4 Handaxes, Explorer's Pack, and 15 GP; or (B) 75 GP |
+
+---
+
+## Combined Example: Species Entry
+
+### Elf Traits
+
+| Trait | Value |
+|-------|-------|
+| Creature Type | Humanoid |
+| Size | Medium (about 5–6 feet tall) |
+| Speed | 30 feet |
+| Life Span | 750 years on average |
+
+**Darkvision.** You have Darkvision with a range of 60 feet.
+
+**Fey Ancestry.** You have Advantage on saving throws you make to avoid or end the Charmed condition.
+
+**Keen Senses.** You have proficiency in the Perception skill.
+
+**Trance.** You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.
+
+---
+
+## Spacing Reference
+
+The following shows stacked elements to evaluate vertical rhythm:
+
+### Section A
+
+First paragraph of section A.
+
+Second paragraph of section A.
+
+### Section B
+
+First paragraph of section B with a list following:
+
+- Item one
+- Item two
+- Item three
+
+And then continuing prose after the list.
+
+### Section C
+
+| Data | Value |
+|------|-------|
+| Row 1 | 10 |
+| Row 2 | 20 |
+
+Text immediately after a table to show spacing.

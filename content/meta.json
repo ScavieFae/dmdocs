@@ -1,0 +1,28 @@
+{
+  "title": "SRD 5.2.1",
+  "root": true,
+  "pages": [
+    "index",
+    "style-guide",
+    "---Rules---",
+    "playing-the-game",
+    "combat",
+    "---Characters---",
+    "character-creation",
+    "level-advancement",
+    "classes",
+    "origins",
+    "feats",
+    "---Equipment---",
+    "...equipment",
+    "---Spells---",
+    "spells",
+    "---Magic Items---",
+    "magic-items",
+    "---Monsters---",
+    "monsters",
+    "---Reference---",
+    "rules-glossary",
+    "toolbox"
+  ]
+}
