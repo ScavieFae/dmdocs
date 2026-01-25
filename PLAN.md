@@ -1,4 +1,4 @@
-# DND Axis: LLM-Optimized D&D 5e SRD Documentation
+# DMDocs: LLM-Optimized D&D 5e SRD Documentation
 
 ## Project Goal
 

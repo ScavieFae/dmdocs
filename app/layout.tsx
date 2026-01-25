@@ -6,7 +6,7 @@ import { RootProvider } from "fumadocs-ui/provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DND Axis - D&D 5e SRD Reference",
+  title: "DMDocs - D&D 5e SRD Reference",
   description: "LLM-optimized D&D 5th Edition System Reference Document",
 };
 

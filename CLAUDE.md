@@ -1,4 +1,4 @@
-# DND Axis - Project Instructions
+# DMDocs - Project Instructions
 
 ## Purpose
 
