@@ -1,4 +1,8 @@
 {
   "title": "Rules Glossary",
-  "pages": ["index"]
+  "pages": [
+    "index",
+    "conditions",
+    "terms"
+  ]
 }

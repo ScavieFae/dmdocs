@@ -152,6 +152,11 @@ body {
     padding-left: 1.25rem;
   }
 
+  /* Ordered lists get more indentation for visual hierarchy */
+  .prose ol {
+    padding-left: 1.75rem;
+  }
+
   .prose li {
     margin-top: 0.125rem;
     margin-bottom: 0.125rem;
@@ -242,5 +247,11 @@ body {
     margin-left: 0;
     margin-right: 0;
     font-style: italic;
+  }
+
+  /* Remove auto-added quotation marks from blockquotes */
+  .prose blockquote p::before,
+  .prose blockquote p::after {
+    content: none;
   }
 }
