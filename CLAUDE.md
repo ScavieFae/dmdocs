@@ -86,9 +86,11 @@ More content.
 
 ## Current Progress
 
-### Complete (content extracted):
+### Complete:
 - [x] Playing the Game (7 pages under "Rules" header)
 - [x] Combat (6 pages as separate dropdown under "Rules" header)
+- [x] Spellbook (323 spells, organized by 8 schools)
+- [x] Bestiary (329 monsters, organized by 14 creature types)
 
 ### Scaffolded (structure only, placeholder content):
 - [x] Character Creation (6 pages)
@@ -98,11 +100,68 @@ More content.
 - [ ] Character Origins (backgrounds + species - use dropdown)
 - [ ] Feats
 - [ ] Equipment (consider splitting: Weapons, Armor, Gear, Services)
-- [ ] Spells (hundreds - need extraction script)
-- [ ] Magic Items (many - need extraction script)
-- [ ] Monsters (hundreds - need extraction script)
+- [ ] Magic Items (need extraction script - follow bestiary pattern)
 - [ ] Rules Glossary (keep flat - alphabetical reference)
 - [ ] Gameplay Toolbox
+
+## Multi-Docs Architecture
+
+The site uses Fumadocs multi-docs pattern for content types with unique schemas:
+
+```
+/                     # Root
+├── content/          # General docs (rules, classes, etc.)
+├── spellbook/        # Spells by school
+└── bestiary/         # Monsters by creature type
+```
+
+Each content source is defined in `source.config.ts` with its own Zod schema extending `frontmatterSchema`.
+
+### Adding a New Content Type (e.g., Magic Items)
+
+1. **Create folder structure**: `magicitems/` at root with subfolders by category
+2. **Define schema** in `source.config.ts`:
+   ```typescript
+   const magicItemSchema = frontmatterSchema.extend({
+     rarity: z.enum(['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact']).optional(),
+     attunement: z.boolean().optional(),
+     itemType: z.string().optional(),
+   });
+   ```
+3. **Add to sources** in `source.config.ts`
+4. **Create route**: `app/(docs)/magicitems/[[...slug]]/page.tsx` (copy from bestiary)
+5. **Create layout**: `app/(docs)/magicitems/layout.tsx` with theme class
+6. **Add theme** in `globals.css` (optional, for distinct coloring)
+
+### Schema Gotchas
+
+- **Zod version**: Must use 3.23.8 (pinned in package.json)
+- **CR as string**: Challenge ratings must be quoted in YAML (`cr: "17"` not `cr: 17`)
+- **Optional fields**: Use `.optional()` liberally - not all monsters have all fields
+
+### Navigation Patterns
+
+- **Collapsed by default**: Add `"defaultOpen": false` to meta.json
+- **Avoid sidebar duplication**: Don't include `"index"` in pages array if folder has index.mdx
+- **Cross-references**: For items appearing in multiple categories, create stub page with meta refresh redirect
+
+### Theming
+
+Each content type can have its own color theme in `globals.css`:
+```css
+.theme-bestiary {
+  --primary: 350 70% 40%;  /* HSL values */
+}
+```
+
+### Cache Clearing
+
+When navigation breaks or files aren't found:
+```bash
+rm -rf .next .source && npm run dev
+```
+
+Note: `.source` is Fumadocs' cache for MDX processing.
 
 ## Lessons Learned (Jan 2026)
 
@@ -154,12 +213,43 @@ Spellcasting classes: Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, W
 
 ## Content Extraction
 
-The PDF text extraction has column interleaving issues. Options:
-1. **Manual cleanup** - Copy sections from PDF, clean up in editor
-2. **Better extraction** - Use pymupdf for column-aware extraction
-3. **Existing markdown** - Some 5.1 markdown exists on GitHub (OldManUmby/DND.SRD.Wiki), but 5.2.1 is newer
+### Source Material
 
-For high-volume sections (spells, monsters), scripts will be needed.
+- **PDF**: Has column interleaving issues, not ideal for bulk extraction
+- **GitHub markdown**: https://github.com/springbov/dndsrd5.2_markdown - clean 5.2.1 markdown, used for spells and monsters
+
+### Import Scripts
+
+Located in `scripts/`:
+- `import-spells.py` - Parses spell markdown, generates MDX with typed frontmatter
+- `import-monsters.py` - Parses monster markdown, generates MDX with stat block data
+- `reorganize-*.py` - Group related creatures (dragons, fiends, goblinoids, etc.)
+
+### Creature Grouping Pattern
+
+Related creatures get subfolders with comparison tables:
+```
+bestiary/dragon/
+├── index.mdx           # Overview of all dragons
+├── red-dragon/
+│   ├── index.mdx       # Red dragon comparison table (wyrmling → ancient)
+│   ├── wyrmling.mdx
+│   ├── young.mdx
+│   ├── adult.mdx
+│   └── ancient.mdx
+└── [other colors]/
+```
+
+Applied to: dragons (by color), devils/demons (by CR), goblins/hobgoblins/bugbears, elementals/mephits, golems, sphinxes, hags.
+
+### Cross-Type References
+
+When a creature logically belongs in multiple places (e.g., Night Hag is a Fiend but grouped with Hags under Fey):
+1. Keep canonical page in correct type folder (`fiend/night-hag.mdx`)
+2. Create stub in related folder (`fey/hags/night-hag.mdx`) with:
+   - Title including type hint: "Night Hag (Fiend)"
+   - Meta refresh redirect to canonical page
+   - Fallback link for accessibility
 
 ## LLM Optimization (TODO)
 
@@ -196,5 +286,10 @@ npm run build
 
 ### Clear cache if errors
 ```bash
-rm -rf .next && npm run dev
+rm -rf .next .source && npm run dev
+```
+
+### Force restart (turbopack corruption)
+```bash
+pkill -9 -f "next"; rm -rf .next .source; npm run dev
 ```
