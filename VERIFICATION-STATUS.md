@@ -46,21 +46,21 @@ Tracking which pages have been verified against the authoritative SRD source.
 - [x] level-advancement.mdx
 
 ## Playing the Game
-- [ ] rhythm-of-play.mdx
-- [ ] the-six-abilities.mdx
-- [ ] proficiency.mdx
-- [ ] d20-tests.mdx
-- [ ] actions.mdx
-- [ ] exploration.mdx
-- [ ] social-interaction.mdx
+- [x] rhythm-of-play.mdx — *matches SRD*
+- [x] the-six-abilities.mdx — *matches SRD*
+- [x] proficiency.mdx — *matches SRD*
+- [x] d20-tests.mdx — *matches SRD, Heroic Inspiration section reorganized*
+- [x] actions.mdx — *fixed One Thing at a Time examples*
+- [x] exploration.mdx — *matches SRD*
+- [x] social-interaction.mdx — *matches SRD*
 
 ## Combat
-- [ ] order-and-initiative.mdx
-- [ ] movement-and-position.mdx
-- [ ] attacks.mdx
-- [ ] damage-and-healing.mdx
-- [ ] mounted-and-underwater.mdx
-- [ ] playing-on-a-grid.mdx
+- [x] order-and-initiative.mdx — *matches SRD*
+- [x] movement-and-position.mdx — *added Creature Size table intro text*
+- [x] attacks.mdx — *fixed cover example, hand-held hyphenation*
+- [x] damage-and-healing.mdx — *matches SRD*
+- [x] mounted-and-underwater.mdx — *matches SRD*
+- [x] playing-on-a-grid.mdx — *added Speed tip about character sheet*
 
 ## Equipment
 - [x] coins.mdx — *removed extra exchange table, added missing text*
@@ -122,8 +122,8 @@ Tracking which pages have been verified against the authoritative SRD source.
 | Character Creation | 5/5 | 0 |
 | Origins | 11/11 | 0 |
 | Core Rules | 2/2 | 0 |
-| Playing the Game | 0/7 | 7 |
-| Combat | 0/6 | 6 |
+| Playing the Game | 7/7 | 0 |
+| Combat | 6/6 | 0 |
 | Equipment | 13/13 | 0 |
 | Magic Item Rules | 5/5 | 0 |
 | Rules Glossary | 2/2 | 0 |
@@ -131,4 +131,4 @@ Tracking which pages have been verified against the authoritative SRD source.
 | Spellbook | 0/324 | 324 |
 | Bestiary | 0/357 | 357 |
 
-**Priority for next audit:** Playing the Game and Combat sections
+**Priority for next audit:** Spellbook (check for PHB contamination and wizard name prefixes)
