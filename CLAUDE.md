@@ -91,18 +91,18 @@ More content.
 - [x] Combat (6 pages as separate dropdown under "Rules" header)
 - [x] Spellbook (323 spells, organized by 8 schools)
 - [x] Bestiary (329 monsters, organized by 14 creature types)
+- [x] Rules Glossary (conditions + terms, verified against PDF)
+- [x] Gameplay Toolbox (9 pages, verified against PDF)
 
 ### Scaffolded (structure only, placeholder content):
 - [x] Character Creation (6 pages)
+- [x] Classes (12 classes with subclasses - need PDF verification, see spell naming issue above)
 
 ### Not Yet Scaffolded:
-- [ ] Classes (12 classes, each with subclass - use dropdown)
 - [ ] Character Origins (backgrounds + species - use dropdown)
 - [ ] Feats
 - [ ] Equipment (consider splitting: Weapons, Armor, Gear, Services)
 - [ ] Magic Items (need extraction script - follow bestiary pattern)
-- [ ] Rules Glossary (keep flat - alphabetical reference)
-- [ ] Gameplay Toolbox
 
 ## Multi-Docs Architecture
 
@@ -210,6 +210,60 @@ Each class page follows this pattern:
 8. **Spell List** (if applicable): After subclass, table of spells by level
 
 Spellcasting classes: Bard, Cleric, Druid, Paladin, Ranger, Sorcerer, Warlock, Wizard
+
+## Content Verification
+
+### Authoritative Source
+
+**PDF screenshots are the authoritative source.** Do NOT trust:
+- D&D Beyond web extracts (contaminated with 2024 PHB rules, not 5.2.1 SRD)
+- Text extracted from PDF (column interleaving causes errors)
+- Memory/paraphrasing (must match PDF verbatim for CC compliance)
+
+### Dual-Column PDF Pitfalls
+
+The SRD PDF uses two-column layout. Common transcription errors:
+- **End-of-page drift**: Content at bottom of pages often missed or paraphrased
+- **Column transitions**: Sections spanning columns get incomplete
+- **Tables**: Can interleave incorrectly when extracted as text
+
+When verifying, pay extra attention to page edges and column boundaries.
+
+### Spell Naming (5.2.1 Change)
+
+**The 5.2.1 SRD removed wizard name prefixes from spells for CC licensing.**
+
+Old (5e) → New (5.2.1):
+- Melf's Acid Arrow → Acid Arrow
+- Tasha's Hideous Laughter → Hideous Laughter
+- Tenser's Floating Disk → Floating Disk
+- Leomund's Tiny Hut → Tiny Hut
+- Leomund's Secret Chest → Secret Chest
+- Bigby's Hand → Arcane Hand
+- Mordenkainen's Sword → Arcane Sword
+- Mordenkainen's Faithful Hound → Faithful Hound
+- Mordenkainen's Private Sanctum → Private Sanctum
+- Mordenkainen's Magnificent Mansion → Magnificent Mansion
+- Evard's Black Tentacles → Black Tentacles
+- Otiluke's Resilient Sphere → Resilient Sphere
+- Otiluke's Freezing Sphere → Freezing Sphere
+- Otto's Irresistible Dance → Irresistible Dance
+- Rary's Telepathic Bond → Telepathic Bond
+- Drawmij's Instant Summons → Instant Summons
+- Nystul's Magic Aura → Arcanist's Magic Aura
+
+**This affects ALL class spell lists**, not just Wizard. Check each spellcasting class.
+
+### Class Verification Status
+
+- [ ] Bard - spell names not verified
+- [ ] Cleric - spell names not verified
+- [ ] Druid - spell names not verified
+- [ ] Paladin - spell names not verified
+- [ ] Ranger - spell names not verified
+- [ ] Sorcerer - spell names not verified
+- [ ] Warlock - spell names not verified
+- [x] Wizard - levels 2-9 done, level 0-1 pending
 
 ## Content Extraction
 
