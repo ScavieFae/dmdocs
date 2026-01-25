@@ -1,5 +1,23 @@
 {
   "title": "Armor",
-  "pages": [],
+  "pages": [
+    "adamantine-armor",
+    "animated-shield",
+    "armor-1-2-or-3",
+    "armor-of-invulnerability",
+    "armor-of-resistance",
+    "armor-of-vulnerability",
+    "arrow-catching-shield",
+    "demon-armor",
+    "dragon-scale-mail",
+    "dwarven-plate",
+    "elven-chain",
+    "glamoured-studded-leather",
+    "mithral-armor",
+    "plate-armor-of-etherealness",
+    "shield-1-2-or-3",
+    "shield-of-missile-attraction",
+    "spellguard-shield"
+  ],
   "defaultOpen": false
 }

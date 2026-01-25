@@ -7,6 +7,7 @@ import {
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
+import { MagicItemCard } from "@/components/magic-item-card";
 
 export default async function Page({
   params,
@@ -17,13 +18,15 @@ export default async function Page({
   if (!page) notFound();
 
   const MDX = page.data.body;
+  const isItem = page.data.rarity !== undefined;
 
   return (
     <DocsPage toc={page.data.toc}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      {page.data.description && (
+      {page.data.description && !isItem && (
         <DocsDescription>{page.data.description}</DocsDescription>
       )}
+      <MagicItemCard data={page.data} />
       <DocsBody>
         <MDX components={{ ...defaultMdxComponents }} />
       </DocsBody>

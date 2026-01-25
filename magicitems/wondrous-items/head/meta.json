@@ -1,0 +1,17 @@
+{
+  "title": "Head Items",
+  "pages": [
+    "circlet-of-blasting",
+    "eyes-of-charming",
+    "eyes-of-minute-seeing",
+    "eyes-of-the-eagle",
+    "goggles-of-night",
+    "hat-of-disguise",
+    "headband-of-intellect",
+    "helm-of-brilliance",
+    "helm-of-comprehending-languages",
+    "helm-of-telepathy",
+    "helm-of-teleportation"
+  ],
+  "defaultOpen": false
+}

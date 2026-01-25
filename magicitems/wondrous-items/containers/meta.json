@@ -1,0 +1,19 @@
+{
+  "title": "Containers",
+  "pages": [
+    "bag-of-beans",
+    "bag-of-devouring",
+    "bag-of-holding",
+    "bag-of-tricks",
+    "bowl-of-commanding-water-elementals",
+    "decanter-of-endless-water",
+    "efficient-quiver",
+    "efreeti-bottle",
+    "eversmoking-bottle",
+    "handy-haversack",
+    "iron-flask",
+    "portable-hole",
+    "well-of-many-worlds"
+  ],
+  "defaultOpen": false
+}

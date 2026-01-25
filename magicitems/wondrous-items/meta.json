@@ -1,5 +1,14 @@
 {
   "title": "Wondrous Items",
-  "pages": [],
+  "pages": [
+    "worn",
+    "head",
+    "jewelry",
+    "containers",
+    "figurines",
+    "instruments",
+    "tomes",
+    "misc"
+  ],
   "defaultOpen": false
 }

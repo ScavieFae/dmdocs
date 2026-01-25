@@ -1,5 +1,12 @@
 {
   "title": "Rods",
-  "pages": [],
+  "pages": [
+    "immovable-rod",
+    "rod-of-absorption",
+    "rod-of-alertness",
+    "rod-of-lordly-might",
+    "rod-of-rulership",
+    "rod-of-security"
+  ],
   "defaultOpen": false
 }

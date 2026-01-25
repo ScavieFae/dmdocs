@@ -1,6 +1,7 @@
 {
   "title": "Magic Items",
   "pages": [
+    "index",
     "armor",
     "potions",
     "rings",

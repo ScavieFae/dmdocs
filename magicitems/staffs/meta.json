@@ -1,5 +1,18 @@
 {
   "title": "Staffs",
-  "pages": [],
+  "pages": [
+    "staff-of-charming",
+    "staff-of-fire",
+    "staff-of-frost",
+    "staff-of-healing",
+    "staff-of-power",
+    "staff-of-striking",
+    "staff-of-swarming-insects",
+    "staff-of-the-magi",
+    "staff-of-the-python",
+    "staff-of-the-woodlands",
+    "staff-of-thunder-and-lightning",
+    "staff-of-withering"
+  ],
   "defaultOpen": false
 }

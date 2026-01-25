@@ -1,5 +1,7 @@
 {
   "title": "Scrolls",
-  "pages": [],
+  "pages": [
+    "spell-scroll"
+  ],
   "defaultOpen": false
 }

@@ -1,0 +1,33 @@
+{
+  "title": "Worn Items",
+  "pages": [
+    "belt-of-giant-strength",
+    "boots-of-elvenkind",
+    "boots-of-levitation",
+    "boots-of-speed",
+    "boots-of-striding-and-springing",
+    "boots-of-the-winterlands",
+    "bracers-of-archery",
+    "bracers-of-defense",
+    "cape-of-the-mountebank",
+    "cloak-of-arachnida",
+    "cloak-of-displacement",
+    "cloak-of-elvenkind",
+    "cloak-of-protection",
+    "cloak-of-the-bat",
+    "cloak-of-the-manta-ray",
+    "gauntlets-of-ogre-power",
+    "gloves-of-missile-snaring",
+    "gloves-of-swimming-and-climbing",
+    "mantle-of-spell-resistance",
+    "robe-of-eyes",
+    "robe-of-scintillating-colors",
+    "robe-of-stars",
+    "robe-of-the-archmagi",
+    "robe-of-useful-items",
+    "slippers-of-spider-climbing",
+    "winged-boots",
+    "wings-of-flying"
+  ],
+  "defaultOpen": false
+}

@@ -1,5 +1,27 @@
 {
   "title": "Rings",
-  "pages": [],
+  "pages": [
+    "ring-of-animal-influence",
+    "ring-of-djinni-summoning",
+    "ring-of-elemental-command",
+    "ring-of-evasion",
+    "ring-of-feather-falling",
+    "ring-of-free-action",
+    "ring-of-invisibility",
+    "ring-of-jumping",
+    "ring-of-mind-shielding",
+    "ring-of-protection",
+    "ring-of-regeneration",
+    "ring-of-resistance",
+    "ring-of-shooting-stars",
+    "ring-of-spell-storing",
+    "ring-of-spell-turning",
+    "ring-of-swimming",
+    "ring-of-the-ram",
+    "ring-of-three-wishes",
+    "ring-of-warmth",
+    "ring-of-water-walking",
+    "ring-of-x-ray-vision"
+  ],
   "defaultOpen": false
 }

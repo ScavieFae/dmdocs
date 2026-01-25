@@ -47,8 +47,9 @@ const monsterSchema = frontmatterSchema.extend({
 
 // Magic item schema - extends base frontmatter with item-specific fields
 const magicItemSchema = frontmatterSchema.extend({
+  category: z.enum(['Armor', 'Potion', 'Ring', 'Rod', 'Scroll', 'Staff', 'Wand', 'Weapon', 'Wondrous Item']).optional(),
   rarity: z.enum(['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact']).optional(),
-  itemType: z.string().optional(), // "Armor", "Potion", "Ring", "Rod", "Scroll", "Staff", "Wand", "Weapon", "Wondrous Item"
+  itemType: z.string().optional(), // Subtype like "Shield", "Any Ammunition", etc.
   attunement: z.union([z.boolean(), z.string()]).optional(), // true, false, or "by a spellcaster"
   charges: z.object({
     max: z.number(),

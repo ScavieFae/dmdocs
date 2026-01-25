@@ -1,0 +1,22 @@
+{
+  "title": "Jewelry",
+  "pages": [
+    "amulet-of-health",
+    "amulet-of-proof-against-detection-and-location",
+    "amulet-of-the-planes",
+    "brooch-of-shielding",
+    "medallion-of-thoughts",
+    "necklace-of-adaptation",
+    "necklace-of-fireballs",
+    "necklace-of-prayer-beads",
+    "pearl-of-power",
+    "periapt-of-health",
+    "periapt-of-proof-against-poison",
+    "periapt-of-wound-closure",
+    "scarab-of-protection",
+    "talisman-of-pure-good",
+    "talisman-of-the-sphere",
+    "talisman-of-ultimate-evil"
+  ],
+  "defaultOpen": false
+}

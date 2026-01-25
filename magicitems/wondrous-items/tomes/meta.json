@@ -1,0 +1,15 @@
+{
+  "title": "Tomes & Manuals",
+  "pages": [
+    "deck-of-illusions",
+    "manual-of-bodily-health",
+    "manual-of-gainful-exercise",
+    "manual-of-golems",
+    "manual-of-quickness-of-action",
+    "mysterious-deck",
+    "tome-of-clear-thought",
+    "tome-of-leadership-and-influence",
+    "tome-of-understanding"
+  ],
+  "defaultOpen": false
+}

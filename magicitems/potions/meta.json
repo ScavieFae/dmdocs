@@ -1,5 +1,26 @@
 {
   "title": "Potions",
-  "pages": [],
+  "pages": [
+    "oil-of-etherealness",
+    "oil-of-sharpness",
+    "oil-of-slipperiness",
+    "philter-of-love",
+    "potion-of-animal-friendship",
+    "potion-of-clairvoyance",
+    "potion-of-climbing",
+    "potion-of-diminution",
+    "potion-of-flying",
+    "potion-of-gaseous-form",
+    "potion-of-giant-strength",
+    "potion-of-growth",
+    "potion-of-heroism",
+    "potion-of-invisibility",
+    "potion-of-mind-reading",
+    "potion-of-poison",
+    "potion-of-resistance",
+    "potion-of-speed",
+    "potion-of-water-breathing",
+    "potions-of-healing"
+  ],
   "defaultOpen": false
 }

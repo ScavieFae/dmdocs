@@ -1,5 +1,18 @@
 {
   "title": "Wands",
-  "pages": [],
+  "pages": [
+    "wand-of-binding",
+    "wand-of-enemy-detection",
+    "wand-of-fireballs",
+    "wand-of-lightning-bolts",
+    "wand-of-magic-detection",
+    "wand-of-magic-missiles",
+    "wand-of-paralysis",
+    "wand-of-polymorph",
+    "wand-of-secrets",
+    "wand-of-the-war-mage-1-2-or-3",
+    "wand-of-web",
+    "wand-of-wonder"
+  ],
   "defaultOpen": false
 }
