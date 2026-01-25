@@ -23,7 +23,7 @@ export function AISearchTrigger() {
 }
 
 function AISearchDialog({ onClose }: { onClose: () => void }) {
-  const { messages, sendMessage, status } = useChat({ api: "/api/chat" });
+  const { messages, sendMessage, status } = useChat();
   const [input, setInput] = useState("");
   const [mounted, setMounted] = useState(false);
 
