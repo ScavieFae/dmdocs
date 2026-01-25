@@ -50,6 +50,16 @@ body {
   --primary-foreground: 0 0% 98%;
 }
 
+/* Magic Items: dusty violet */
+.theme-magicitems {
+  --primary: 270 30% 45%;
+  --primary-foreground: 0 0% 98%;
+}
+.dark .theme-magicitems {
+  --primary: 270 35% 55%;
+  --primary-foreground: 0 0% 98%;
+}
+
 /* Layout: inset sidebars from edge */
 :root {
   --fd-layout-offset: 0px;

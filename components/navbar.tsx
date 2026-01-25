@@ -5,13 +5,14 @@ import { usePathname } from "next/navigation";
 import { useSearchContext } from "fumadocs-ui/provider";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Search, Home, BookOpen, Skull, Sun, Moon, ScanEye } from "lucide-react";
+import { Search, Home, BookOpen, Skull, Sun, Moon, ScanEye, Gem } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/docs", label: "Rules", icon: BookOpen },
   { href: "/spellbook", label: "Spellbook", icon: ScanEye },
   { href: "/bestiary", label: "Bestiary", icon: Skull },
+  { href: "/magicitems", label: "Magic Items", icon: Gem },
 ];
 
 export function Navbar() {
@@ -38,7 +39,7 @@ export function Navbar() {
       >
         <div className="flex items-center gap-4 px-4">
           <Link href="/" className="font-bold text-2xl shrink-0">
-            DNDocs
+            DMDocs
           </Link>
         </div>
 

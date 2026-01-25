@@ -1,4 +1,4 @@
-import { docs, meta, bestiaryDocs, bestiaryMeta, spellDocs, spellMeta } from '@/.source';
+import { docs, meta, bestiaryDocs, bestiaryMeta, spellDocs, spellMeta, magicItemDocs, magicItemMeta } from '@/.source';
 import { createMDXSource } from 'fumadocs-mdx';
 import { loader } from 'fumadocs-core/source';
 
@@ -18,6 +18,12 @@ export const bestiarySource = loader({
 export const spellSource = loader({
   baseUrl: '/spellbook',
   source: createMDXSource(spellDocs, spellMeta),
+});
+
+// Magic Items source
+export const magicItemsSource = loader({
+  baseUrl: '/magicitems',
+  source: createMDXSource(magicItemDocs, magicItemMeta),
 });
 
 // Helper to get all spells with their typed data

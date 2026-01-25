@@ -45,6 +45,19 @@ const monsterSchema = frontmatterSchema.extend({
   xp: z.number().optional(),
 });
 
+// Magic item schema - extends base frontmatter with item-specific fields
+const magicItemSchema = frontmatterSchema.extend({
+  rarity: z.enum(['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact']).optional(),
+  itemType: z.string().optional(), // "Armor", "Potion", "Ring", "Rod", "Scroll", "Staff", "Wand", "Weapon", "Wondrous Item"
+  attunement: z.union([z.boolean(), z.string()]).optional(), // true, false, or "by a spellcaster"
+  charges: z.object({
+    max: z.number(),
+    recharge: z.string().optional(), // "dawn", "1d6+1 at dawn", etc.
+  }).optional(),
+  armorType: z.string().optional(), // For armor items
+  weaponType: z.string().optional(), // For weapon items
+});
+
 // Spell schema - extends base frontmatter with spell-specific fields
 const spellSchema = frontmatterSchema.extend({
   level: z.number().min(0).max(9).optional(), // 0 = cantrip
@@ -101,6 +114,17 @@ export const { docs: spellDocs, meta: spellMeta } = defineDocs({
   },
   meta: {
     dir: 'spellbook',
+  },
+});
+
+// Magic Items (item reference with typed frontmatter)
+export const { docs: magicItemDocs, meta: magicItemMeta } = defineDocs({
+  docs: {
+    dir: 'magicitems',
+    schema: magicItemSchema,
+  },
+  meta: {
+    dir: 'magicitems',
   },
 });
 

@@ -1,0 +1,14 @@
+{
+  "title": "Magic Items",
+  "pages": [
+    "armor",
+    "potions",
+    "rings",
+    "rods",
+    "scrolls",
+    "staffs",
+    "wands",
+    "weapons",
+    "wondrous-items"
+  ]
+}
