@@ -6,6 +6,7 @@ import { useSearchContext } from "fumadocs-ui/provider";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Search, Home, BookOpen, Skull, Sun, Moon, ScanEye, Gem } from "lucide-react";
+import { AISearchTrigger } from "./ai-search";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
@@ -57,8 +58,9 @@ export function Navbar() {
           </button>
         </div>
 
-        {/* Right side - theme toggle */}
-        <div className="shrink-0 px-4">
+        {/* Right side - AI search + theme toggle */}
+        <div className="shrink-0 px-4 flex items-center gap-2">
+          <AISearchTrigger />
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             className="p-2 rounded-md hover:bg-fd-accent transition-colors"
