@@ -298,6 +298,11 @@ Based on docs-ai-era research:
 - [ ] Add structured data (JSON-LD) for stat blocks
 - [ ] Cross-reference related content
 
+## Future Work (TODO)
+
+- [ ] **Frontmatter schema validator** — Script or pre-commit hook that validates MDX frontmatter against Zod schemas in `source.config.ts`. Would catch issues like missing required fields (e.g., `somatic: false` in spell components). Could be `npm run validate` or CI check on PRs.
+- [ ] **Bestiary audit** — Compare monster list against SRD, similar to spellbook audit
+
 ## Attribution (Required)
 
 Every page should include or link to:

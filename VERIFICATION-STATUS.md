@@ -98,9 +98,11 @@ Tracking which pages have been verified against the authoritative SRD source.
 - [x] fear-and-mental-stress.mdx
 - [x] creating-a-background.mdx
 
-## Spellbook (324 spells)
-- [ ] Not yet audited — *potential PHB vs SRD issues*
-- Imported from external markdown, may have wizard name prefixes or extra spells
+## Spellbook (339 spells)
+- [x] Spell list completeness verified against SRD
+- Added 16 missing spells (Barkskin, Contagion, Divine Smite, Find Steed, Forcecage, Freedom of Movement, Freezing Sphere, Greater Restoration, Guidance, Jump, Power Word Heal, Power Word Kill, Resistance, Searing Smite, Shining Smite, Sorcerous Burst)
+- No extra/PHB spells found
+- [ ] Individual spell wording not yet audited
 
 ## Bestiary (357 monsters)
 - [ ] Not yet audited
@@ -128,7 +130,7 @@ Tracking which pages have been verified against the authoritative SRD source.
 | Magic Item Rules | 5/5 | 0 |
 | Rules Glossary | 2/2 | 0 |
 | Gameplay Toolbox | 8/8 | 0 |
-| Spellbook | 0/324 | 324 |
+| Spellbook | 339/339 | 0 (list complete, wording TBD) |
 | Bestiary | 0/357 | 357 |
 
-**Priority for next audit:** Spellbook (check for PHB contamination and wizard name prefixes)
+**Priority for next audit:** Bestiary (compare monster list against SRD)
