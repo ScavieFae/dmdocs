@@ -8,8 +8,23 @@ import {
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
 
+interface SpellData {
+  level?: number;
+  school?: string;
+  ritual?: boolean;
+  castingTime?: string;
+  range?: string;
+  duration?: string;
+  classes?: string[];
+  components?: {
+    verbal?: boolean;
+    somatic?: boolean;
+    material?: string;
+  };
+}
+
 // Component to display spell stats in a consistent format
-function SpellStats({ data }: { data: any }) {
+function SpellStats({ data }: { data: SpellData }) {
   // Only render if this is actually a spell (has level defined)
   if (data.level === undefined) return null;
 

@@ -7,6 +7,9 @@
     "---Rules---",
     "playing-the-game",
     "combat",
+    "toolbox",
+    "rules-glossary",
+    "conditions-quickref",
     "---Characters---",
     "character-creation",
     "level-advancement",
@@ -14,9 +17,6 @@
     "origins",
     "feats",
     "---Equipment---",
-    "...equipment",
-    "---Reference---",
-    "toolbox",
-    "rules-glossary"
+    "...equipment"
   ]
 }

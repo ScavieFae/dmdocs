@@ -55,6 +55,8 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 | 19 | +6 | Epic Boon | 4 | 5 | 21 |
 | 20 | +6 | Greater Divine Intervention | 4 | 5 | 22 |
 
+**Base Class Features by Tier**
+
 <Tabs items={['Tier 1 (Levels 1-4)', 'Tier 2 (Levels 5-10)', 'Tier 3 (Levels 11-16)', 'Tier 4 (Levels 17-20)']}>
 <Tab value="Tier 1 (Levels 1-4)">
 
@@ -92,7 +94,7 @@ You have dedicated yourself to one of the following sacred roles of your choice.
 
 ### Level 2: Channel Divinity
 
-You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two such effects: Divine Spark and Turn Undead, each of which is described below. Each time you use this class's Channel Divinity, you choose which Channel Divinity effect from this class to create, and you gain other Channel Divinity effect options at higher Cleric levels.
+You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with two such effects: Divine Spark and Turn Undead, each of which is described below. Each time you use this class's Channel Divinity, choose which Channel Divinity effect from this class to create. You gain additional effect options at higher Cleric levels.
 
 You can use this class's Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain additional uses when you reach certain Cleric levels, as shown in the Channel Divinity column of the Cleric Features table.
 
@@ -102,7 +104,7 @@ If a Channel Divinity effect requires a saving throw, the DC equals the spell sa
 
 You roll an additional d8 when you reach Cleric levels 7 (2d8), 13 (3d8), and 18 (4d8).
 
-**Turn Undead.** As a Magic action, you present your Holy Symbol and speak a prayer censuring Undead creatures. Each Undead within 30 feet of you must make a Wisdom saving throw. If the creature fails its save, it has the Frightened and Incapacitated conditions for 1 minute. For that duration, it tries to move as far from you as it can on its turns. This effect ends early on the creature if it takes any damage, if you have the Incapacitated condition, or if you die.
+**Turn Undead.** As a Magic action, you present your Holy Symbol and censure Undead creatures. Each Undead of your choice within 30 feet of you must make a Wisdom saving throw. If the creature fails its save, it has the Frightened and Incapacitated conditions for 1 minute. For that duration, it tries to move as far from you as it can on its turns. This effect ends early on the creature if it takes any damage, if you have the Incapacitated condition, or if you die.
 
 ### Level 3: Cleric Subclass
 
@@ -110,7 +112,7 @@ You gain a Cleric subclass of your choice. The Life Domain subclass is detailed 
 
 ### Level 4: Ability Score Improvement
 
-You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Cleric levels 8, 12, and 16.
+You gain the Ability Score Improvement feat (see "Feats") or another feat of your choice for which you qualify. You gain this feature again at Cleric levels 8, 12, and 16.
 
 </Tab>
 <Tab value="Tier 2 (Levels 5-10)">
@@ -121,7 +123,7 @@ Whenever you use Turn Undead, you can roll a number of d8s equal to your Wisdom 
 
 ### Level 7: Blessed Strikes
 
-Divine power infuses you in battle. You gain one of the following options of your choice (if you get this feature from two sources, you still pick only one option).
+Divine power infuses you in battle. You gain one of the following options of your choice (if you get either option from a Cleric subclass in an older book, use only the option you choose for this feature).
 
 **Divine Strike.** Once on each of your turns when you hit a creature with an attack roll using a weapon, you can cause the target to take an extra 1d8 Necrotic or Radiant damage (your choice).
 
@@ -129,9 +131,7 @@ Divine power infuses you in battle. You gain one of the following options of you
 
 ### Level 10: Divine Intervention
 
-You can call on your deity or pantheon to intervene on your behalf. As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. As part of the same action, you cast that spell without expending a spell slot or needing Material components.
-
-Once you use this feature, you can't do so again until you finish a Long Rest.
+You can call on your deity or pantheon to intervene on your behalf. As a Magic action, choose any Cleric spell of level 5 or lower that doesn't require a Reaction to cast. As part of the same action, you cast that spell without expending a spell slot or needing Material components. You can't use this feature again until you finish a Long Rest.
 
 </Tab>
 <Tab value="Tier 3 (Levels 11-16)">
@@ -149,7 +149,7 @@ The option you chose for Blessed Strikes grows more powerful.
 
 ### Level 19: Epic Boon
 
-You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.
+You gain an Epic Boon feat (see "Feats") or another feat of your choice for which you qualify. Boon of Fate is recommended.
 
 ### Level 20: Greater Divine Intervention
 
@@ -164,9 +164,9 @@ You can call on even more powerful divine intervention. When you use your Divine
 
 *Soothe the Hurts of the World*
 
-The Life Domain focuses on the vibrant positive energy—one of the fundamental forces of the multiverse—that sustains all life. Clerics who tap into this domain are masters of healing, using that force of life to cure many hurts.
+The Life Domain focuses on the positive energy that helps sustain all life in the multiverse. Clerics who tap into this domain are masters of healing, using that life force to cure many hurts.
 
-Existence itself relies on the positive energy associated with this domain, so a Cleric of almost any religious tradition might choose it. This domain is associated with agricultural deities, sun gods, gods of healing or endurance, and gods of home and community. Religious ones often have clerics of this domain, since the group as a whole might need a healer.
+Existence itself relies on the positive energy associated with this domain, so a Cleric of almost any religious tradition might choose it. This domain is particularly associated with agricultural deities, gods of healing or endurance, and gods of home and community. Religious orders of healing also seek the magic of this domain.
 
 #### Level 3: Disciple of Life
 
@@ -208,15 +208,13 @@ This section presents the Cleric spell list. The spells are organized by spell l
 | Sacred Flame | Evocation | — |
 | Spare the Dying | Necromancy | — |
 | Thaumaturgy | Transmutation | — |
-| Toll the Dead | Necromancy | — |
-| Word of Radiance | Evocation | — |
 
 ### Level 1
 
 | Spell | School | Special |
 |-------|--------|---------|
 | Bane | Enchantment | C |
-| Bless | Enchantment | C |
+| Bless | Enchantment | C, M |
 | Command | Enchantment | — |
 | Create or Destroy Water | Transmutation | — |
 | Cure Wounds | Abjuration | — |
@@ -249,7 +247,7 @@ This section presents the Cleric spell list. The spells are organized by spell l
 | Prayer of Healing | Abjuration | — |
 | Protection from Poison | Abjuration | — |
 | Silence | Illusion | C, R |
-| Spiritual Weapon | Evocation | — |
+| Spiritual Weapon | Evocation | C |
 | Warding Bond | Abjuration | M |
 | Zone of Truth | Enchantment | — |
 
@@ -282,6 +280,7 @@ This section presents the Cleric spell list. The spells are organized by spell l
 
 | Spell | School | Special |
 |-------|--------|---------|
+| Aura of Life | Abjuration | C |
 | Banishment | Abjuration | C |
 | Control Water | Transmutation | C |
 | Death Ward | Abjuration | — |
@@ -314,13 +313,14 @@ This section presents the Cleric spell list. The spells are organized by spell l
 | Spell | School | Special |
 |-------|--------|---------|
 | Blade Barrier | Evocation | C |
-| Create Undead | Necromancy | — |
+| Create Undead | Necromancy | M |
 | Find the Path | Divination | C, M |
 | Forbiddance | Abjuration | R, M |
 | Harm | Necromancy | — |
 | Heal | Abjuration | — |
 | Heroes' Feast | Conjuration | M |
 | Planar Ally | Conjuration | — |
+| Sunbeam | Evocation | C |
 | True Seeing | Divination | M |
 | Word of Recall | Conjuration | — |
 
@@ -345,6 +345,7 @@ This section presents the Cleric spell list. The spells are organized by spell l
 | Control Weather | Transmutation | C |
 | Earthquake | Transmutation | C |
 | Holy Aura | Abjuration | C, M |
+| Sunburst | Evocation | — |
 
 ### Level 9
 

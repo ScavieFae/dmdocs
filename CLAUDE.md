@@ -31,8 +31,10 @@ Do NOT upgrade to v14+ without also upgrading to React 19.
 ## Source Material
 
 - **PDF:** `pdfs/SRD_5.2.1.pdf` (official WotC release, May 2025)
-- **Extracted text:** `pdfs/SRD_5.2.1.txt` (24k lines, has column interleaving issues from PDF layout)
+- **Extracted text (authoritative):** `pdfs/DND-SRD-5.2.1-CC - updated.docx.txt` — verified against PDF, use for verification
+- **Extracted text (old):** `pdfs/SRD_5.2.1.txt` (24k lines, has column interleaving issues)
 - **TOC reference:** `TOC.md` maps the full PDF hierarchy
+- **Verification status:** `VERIFICATION-STATUS.md` — checklist of audited vs pending pages
 
 ## Content Structure
 
@@ -86,23 +88,13 @@ More content.
 
 ## Current Progress
 
-### Complete:
-- [x] Playing the Game (7 pages under "Rules" header)
-- [x] Combat (6 pages as separate dropdown under "Rules" header)
-- [x] Spellbook (323 spells, organized by 8 schools)
-- [x] Bestiary (329 monsters, organized by 14 creature types)
-- [x] Rules Glossary (conditions + terms, verified against PDF)
-- [x] Gameplay Toolbox (9 pages, verified against PDF)
+See `VERIFICATION-STATUS.md` for detailed page-by-page checklist.
 
-### Scaffolded (structure only, placeholder content):
-- [x] Character Creation (6 pages)
-- [x] Classes (12 classes with subclasses - need PDF verification, see spell naming issue above)
+**Verified against SRD:** Classes (all 12), Character Creation, Origins (species + backgrounds), Feats, Level Advancement, Rules Glossary, Gameplay Toolbox
 
-### Not Yet Scaffolded:
-- [ ] Character Origins (backgrounds + species - use dropdown)
-- [ ] Feats
-- [ ] Equipment (consider splitting: Weapons, Armor, Gear, Services)
-- [ ] Magic Items (need extraction script - follow bestiary pattern)
+**Not yet verified:** Playing the Game, Combat, Equipment, Magic Item Rules, Spellbook, Bestiary
+
+**Key finding:** Initial content was created from 2024 PHB, not SRD. Approach unverified sections with suspicion—they likely contain non-SRD material.
 
 ## Multi-Docs Architecture
 
@@ -256,14 +248,7 @@ Old (5e) → New (5.2.1):
 
 ### Class Verification Status
 
-- [ ] Bard - spell names not verified
-- [ ] Cleric - spell names not verified
-- [ ] Druid - spell names not verified
-- [ ] Paladin - spell names not verified
-- [ ] Ranger - spell names not verified
-- [ ] Sorcerer - spell names not verified
-- [ ] Warlock - spell names not verified
-- [x] Wizard - levels 2-9 done, level 0-1 pending
+All 12 classes verified against SRD (Jan 2026). See `VERIFICATION-STATUS.md` for details.
 
 ## Content Extraction
 

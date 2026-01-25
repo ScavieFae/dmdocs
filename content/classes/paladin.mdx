@@ -15,7 +15,7 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 | Saving Throw Proficiencies | Wisdom and Charisma |
 | Skill Proficiencies | Choose 2: Athletics, Insight, Intimidation, Medicine, Persuasion, or Religion |
 | Weapon Proficiencies | Simple and Martial weapons |
-| Armor Training | All armor and Shields |
+| Armor Training | Light, Medium, and Heavy armor and Shields |
 | Starting Equipment | Choose A or B: (A) Chain Mail, Shield, Longsword, 6 Javelins, Holy Symbol, Priest's Pack, and 9 GP; or (B) 150 GP |
 
 ## Becoming a Paladin
@@ -55,6 +55,8 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 | 19 | +6 | Epic Boon | 3 | 15 |
 | 20 | +6 | Subclass feature | 3 | 15 |
 
+**Base Class Features by Tier**
+
 <Tabs items={['Tier 1 (Levels 1-4)', 'Tier 2 (Levels 5-10)', 'Tier 3 (Levels 11-16)', 'Tier 4 (Levels 17-20)']}>
 <Tab value="Tier 1 (Levels 1-4)">
 
@@ -68,13 +70,13 @@ You can also expend 5 Hit Points from the pool of healing power to remove the Po
 
 ### Level 1: Spellcasting
 
-You have learned to draw on divine magic through prayer and meditation. See "Spells" for the rules on spellcasting. The information below details how you use those rules with Paladin spells, which appear in the Paladin spell list later in the class's description.
+You have learned to cast spells through prayer and meditation. See "Spells" for the rules on spellcasting. The information below details how you use those rules with Paladin spells, which appear in the Paladin spell list later in the class's description.
 
 **Spell Slots.** The Paladin Features table shows how many spell slots you have to cast your level 1+ spells. You regain all expended slots when you finish a Long Rest.
 
-**Prepared Spells of Level 1+.** You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 spells from the Paladin spell list. Bless and Divine Smite are recommended.
+**Prepared Spells of Level 1+.** You prepare the list of level 1+ spells that are available for you to cast with this feature. To start, choose two level 1 Paladin spells. Heroism and Searing Smite are recommended.
 
-The number of spells on your list increases as you gain Paladin levels, as shown in the Prepared Spells column of the Paladin Features table. Whenever that number increases, choose additional Paladin spells until the number of spells on your list matches the number in the table. The chosen spells must be of a level for which you have spell slots.
+The number of spells on your list increases as you gain Paladin levels, as shown in the Prepared Spells column of the Paladin Features table. Whenever that number increases, choose additional Paladin spells until the number of spells on your list matches the number in the Paladin Features table. The chosen spells must be of a level for which you have spell slots. For example, if you're a level 5 Paladin, your list of prepared spells can include six Paladin spells of level 1 or 2 in any combination.
 
 If another Paladin feature gives you spells that you always have prepared, those spells don't count against the number of spells you can prepare with this feature, but those spells otherwise count as Paladin spells for you.
 
@@ -92,9 +94,9 @@ Whenever you finish a Long Rest, you can change the kinds of weapons you chose. 
 
 ### Level 2: Fighting Style
 
-You gain a Fighting Style feat of your choice. Defense is recommended.
+You gain a Fighting Style feat of your choice (see "Feats" for feats). Instead of choosing one of those feats, you can choose the option below.
 
-Whenever you gain a Paladin level, you can replace the feat you chose with a different Fighting Style feat.
+**Blessed Warrior.** You learn two Cleric cantrips of your choice (see the Cleric class's section for a list of Cleric spells). Guidance and Sacred Flame are recommended. The chosen cantrips count as Paladin spells for you, and Charisma is your spellcasting ability for them. Whenever you gain a Paladin level, you can replace one of these cantrips with another Cleric cantrip.
 
 ### Level 2: Paladin's Smite
 
@@ -102,9 +104,9 @@ You always have the Divine Smite spell prepared. In addition, you can cast it wi
 
 ### Level 3: Channel Divinity
 
-You can channel divine energy directly from the Outer Planes to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class's Channel Divinity, you choose which effect to create from among those you have from this class.
+You can channel divine energy directly from the Outer Planes, using it to fuel magical effects. You start with one such effect: Divine Sense, which is described below. Other Paladin features give additional Channel Divinity effect options. Each time you use this class's Channel Divinity, you choose which effect from this class to create.
 
-You can use this class's Channel Divinity twice. You regain one expended use when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain additional uses when you reach certain Paladin levels, as shown in the Channel Divinity column of the Paladin Features table.
+You can use this class's Channel Divinity twice. You regain one of its expended uses when you finish a Short Rest, and you regain all expended uses when you finish a Long Rest. You gain an additional use when you reach Paladin level 11.
 
 If a Channel Divinity effect requires a saving throw, the DC equals the spell save DC from this class's Spellcasting feature.
 
@@ -116,7 +118,7 @@ You gain a Paladin subclass of your choice. The Oath of Devotion subclass is det
 
 ### Level 4: Ability Score Improvement
 
-You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Paladin levels 8, 12, and 16.
+You gain the Ability Score Improvement feat (see "Feats") or another feat of your choice for which you qualify. You gain this feature again at Paladin levels 8, 12, and 16.
 
 </Tab>
 <Tab value="Tier 2 (Levels 5-10)">
@@ -133,7 +135,7 @@ You can also cast the spell once without expending a spell slot, and you regain 
 
 ### Level 6: Aura of Protection
 
-You radiate a protective, invisible aura that extends 10 feet from you in every direction, but it doesn't extend through Total Cover.
+You radiate a protective, unseeable aura in a 10-foot emanation that originates from you. The aura is inactive while you have the Incapacitated condition.
 
 You and your allies in the aura gain a bonus to saving throws equal to your Charisma modifier (minimum bonus of +1).
 
@@ -141,37 +143,33 @@ If another Paladin is present, a creature can benefit from only one Aura of Prot
 
 ### Level 9: Abjure Foes
 
-As a Magic action, you can expend one use of your Channel Divinity to overwhelm foes with awe. As you present your Holy Symbol or weapon, you can target a number of creatures equal to your Charisma modifier (minimum of one creature) that you can see within 60 feet of yourself.
-
-Each target must make a Wisdom saving throw. On a failed save, the target has the Frightened condition for 1 minute or until it takes any damage. While Frightened in this way, the target can only take the Dash, Disengage, Dodge, or Hide action.
-
-On a successful save, the target's Speed is 0 until the end of your next turn.
+As a Magic action, you can expend one use of this class's Channel Divinity to overwhelm foes with awe. As you present your Holy Symbol or weapon, you can target a number of creatures equal to your Charisma modifier (minimum of one creature) that you can see within 60 feet of yourself. Each target must succeed on a Wisdom saving throw or have the Frightened condition for 1 minute or until it takes any damage. While Frightened in this way, a target can do only one of the following on its turns: move, take an action, or take a Bonus Action.
 
 ### Level 10: Aura of Courage
 
-You and your allies in your Aura of Protection have Immunity to the Frightened condition.
+You and your allies have Immunity to the Frightened condition while in your Aura of Protection. If a Frightened ally enters the aura, that condition has no effect on that ally while there.
 
 </Tab>
 <Tab value="Tier 3 (Levels 11-16)">
 
 ### Level 11: Radiant Strikes
 
-Your strikes carry divine power. When you hit a creature with a melee weapon or an Unarmed Strike, the target takes an extra 1d8 Radiant damage.
+Your strikes now carry supernatural power. When you hit a target with an attack roll using a Melee weapon or an Unarmed Strike, the target takes an extra 1d8 Radiant damage.
 
 ### Level 14: Restoring Touch
 
-When you use Lay on Hands on a creature, you can also remove one or more of the following conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool for each of these conditions you remove; this healing doesn't restore Hit Points to the creature.
+When you use Lay On Hands on a creature, you can also remove one or more of the following conditions from the creature: Blinded, Charmed, Deafened, Frightened, Paralyzed, or Stunned. You must expend 5 Hit Points from the healing pool of Lay On Hands for each of these conditions you remove; those points don't also restore Hit Points to the creature.
 
 </Tab>
 <Tab value="Tier 4 (Levels 17-20)">
 
 ### Level 18: Aura Expansion
 
-Your Aura of Protection now extends 30 feet from you rather than 10 feet.
+Your Aura of Protection is now a 30-foot emanation.
 
 ### Level 19: Epic Boon
 
-You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Truesight is recommended.
+You gain an Epic Boon feat (see "Feats") or another feat of your choice for which you qualify. Boon of Truesight is recommended.
 
 </Tab>
 </Tabs>
@@ -182,7 +180,15 @@ You gain an Epic Boon feat or another feat of your choice for which you qualify.
 
 *Uphold the Ideals of Justice and Order*
 
-The Oath of Devotion binds a Paladin to the ideals of justice and order. These Paladins meet the ideal of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.
+The Oath of Devotion binds Paladins to the ideals of justice and order. These Paladins meet the archetype of the knight in shining armor. They hold themselves to the highest standards of conduct, and some—for better or worse—hold the rest of the world to the same standards.
+
+Many who swear this oath are devoted to gods of law and good and use their gods' tenets as the measure of personal devotion. Others hold angels as their ideals and incorporate images of angelic wings into their helmets or coats of arms.
+
+These paladins share the following tenets:
+
+- Let your word be your promise.
+- Protect the weak and never fear to act.
+- Let your honorable deeds be an example.
 
 #### Level 3: Oath of Devotion Spells
 
@@ -198,13 +204,15 @@ The magic of your oath ensures you always have certain spells ready; when you re
 
 #### Level 3: Sacred Weapon
 
-When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1). The weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.
+When you take the Attack action, you can expend one use of your Channel Divinity to imbue one Melee weapon that you are holding with positive energy. For 10 minutes or until you use this feature again, you add your Charisma modifier to attack rolls you make with that weapon (minimum bonus of +1), and each time you hit with it, you cause it to deal its normal damage type or Radiant damage.
 
-You can end this effect early (no action required). This effect also ends if you no longer hold the weapon or if you have the Incapacitated condition.
+The weapon also emits Bright Light in a 20-foot radius and Dim Light 20 feet beyond that.
+
+You can end this effect early (no action required). This effect also ends if you aren't carrying the weapon.
 
 #### Level 7: Aura of Devotion
 
-You and your allies in your Aura of Protection have Immunity to the Charmed condition.
+You and your allies have Immunity to the Charmed condition while in your Aura of Protection. If a Charmed ally enters the aura, that condition has no effect on that ally while there.
 
 #### Level 15: Smite of Protection
 
@@ -216,9 +224,9 @@ As a Bonus Action, you can imbue your Aura of Protection with holy power, granti
 
 **Holy Ward.** You have Advantage on any saving throw you are forced to make by a Fiend or an Undead.
 
-**Radiant Damage.** Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Proficiency Bonus plus your Charisma modifier.
+**Radiant Damage.** Whenever an enemy starts its turn in the aura, that creature takes Radiant damage equal to your Charisma modifier plus your Proficiency Bonus.
 
-**Sunlight.** The aura is filled with Bright Light.
+**Sunlight.** The aura is filled with Bright Light that is sunlight.
 
 ---
 
@@ -230,9 +238,8 @@ This section presents the Paladin spell list. The spells are organized by spell 
 
 | Spell | School | Special |
 |-------|--------|---------|
-| Bless | Enchantment | C |
+| Bless | Enchantment | C, M |
 | Command | Enchantment | — |
-| Compelled Duel | Enchantment | C |
 | Cure Wounds | Abjuration | — |
 | Detect Evil and Good | Divination | C |
 | Detect Magic | Divination | C, R |
@@ -244,8 +251,6 @@ This section presents the Paladin spell list. The spells are organized by spell 
 | Purify Food and Drink | Transmutation | R |
 | Searing Smite | Evocation | — |
 | Shield of Faith | Abjuration | C |
-| Thunderous Smite | Evocation | — |
-| Wrathful Smite | Necromancy | — |
 
 ### Level 2
 
@@ -267,13 +272,9 @@ This section presents the Paladin spell list. The spells are organized by spell 
 
 | Spell | School | Special |
 |-------|--------|---------|
-| Aura of Vitality | Abjuration | C |
-| Blinding Smite | Evocation | — |
 | Create Food and Water | Conjuration | — |
-| Crusader's Mantle | Evocation | C |
 | Daylight | Evocation | — |
 | Dispel Magic | Abjuration | — |
-| Elemental Weapon | Transmutation | C |
 | Magic Circle | Abjuration | M |
 | Remove Curse | Abjuration | — |
 | Revivify | Necromancy | M |
@@ -283,22 +284,15 @@ This section presents the Paladin spell list. The spells are organized by spell 
 | Spell | School | Special |
 |-------|--------|---------|
 | Aura of Life | Abjuration | C |
-| Aura of Purity | Abjuration | C |
 | Banishment | Abjuration | C |
 | Death Ward | Abjuration | — |
 | Locate Creature | Divination | C |
-| Staggering Smite | Enchantment | — |
 
 ### Level 5
 
 | Spell | School | Special |
 |-------|--------|---------|
-| Banishing Smite | Conjuration | C |
-| Circle of Power | Abjuration | C |
-| Destructive Wave | Evocation | — |
 | Dispel Evil and Good | Abjuration | C |
 | Geas | Enchantment | — |
 | Greater Restoration | Abjuration | M |
-| Holy Weapon | Evocation | C |
 | Raise Dead | Necromancy | M |
-| Summon Celestial | Conjuration | C, M |

@@ -56,6 +56,8 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 | 19 | +6 | Epic Boon | 10d6 |
 | 20 | +6 | Stroke of Luck | 10d6 |
 
+**Base Class Features by Tier**
+
 <Tabs items={['Tier 1 (Levels 1-4)', 'Tier 2 (Levels 5-10)', 'Tier 3 (Levels 11-16)', 'Tier 4 (Levels 17-20)']}>
 <Tab value="Tier 1 (Levels 1-4)">
 
@@ -65,17 +67,15 @@ You gain Expertise in two of your skill proficiencies of your choice. Sleight of
 
 ### Level 1: Sneak Attack
 
-You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal extra damage to one creature you hit with an attack roll if you're attacking with a Finesse or Ranged weapon and if at least one of the following requirements is met:
+You know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack roll if you have Advantage on the roll and the attack uses a Finesse or a Ranged weapon. The extra damage's type is the same as the weapon's type.
 
-**Advantage.** You have Advantage on the attack roll.
+You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.
 
-**Ally Adjacent to Target.** At least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.
-
-To determine the extra damage, roll a number of d6s equal to half your Rogue level (round up), as shown in the Sneak Attack column of the Rogue Features table.
+The extra damage increases as you gain Rogue levels, as shown in the Sneak Attack column of the Rogue Features table.
 
 ### Level 1: Thieves' Cant
 
-You picked up various languages in the communities where you plied your roguish talents. You know Thieves' Cant and one other language of your choice, which you choose from the language tables in "Rules Glossary."
+You picked up various languages in the communities where you plied your roguish talents. You know Thieves' Cant and one other language of your choice, which you choose from the language tables in "Character Creation."
 
 ### Level 1: Weapon Mastery
 
@@ -97,7 +97,7 @@ As a Bonus Action, you give yourself Advantage on your next attack roll on the c
 
 ### Level 4: Ability Score Improvement
 
-You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16.
+You gain the Ability Score Improvement feat (see "Feats") or another feat of your choice for which you qualify. You gain this feature again at Rogue levels 8, 10, 12, and 16.
 
 </Tab>
 <Tab value="Tier 2 (Levels 5-10)">
@@ -106,11 +106,11 @@ You gain the Ability Score Improvement feat or another feat of your choice for w
 
 You've developed cunning ways to use your Sneak Attack. When you deal Sneak Attack damage, you can add one of the following Cunning Strike effects. Each effect has a die cost, which is the number of Sneak Attack damage dice you must forgo to add the effect. You remove the die before rolling, and the effect occurs immediately after the attack's damage is dealt. For example, if you add the Poison effect, remove 1d6 from the Sneak Attack's damage before rolling.
 
-If a Cunning Strike effect requires a saving throw, the DC equals 8 + your Proficiency Bonus + your Dexterity modifier.
-
-**Disarm (Cost: 1d6).** The target must succeed on a Dexterity saving throw, or it drops one item of your choice that it's holding.
+If a Cunning Strike effect requires a saving throw, the DC equals 8 plus your Dexterity modifier and Proficiency Bonus.
 
 **Poison (Cost: 1d6).** You add a toxin to your strike, forcing the target to make a Constitution saving throw. On a failed save, the target has the Poisoned condition for 1 minute. At the end of each of its turns, the Poisoned target repeats the save, ending the effect on itself on a success.
+
+To use this effect, you must have a Poisoner's Kit on your person.
 
 **Trip (Cost: 1d6).** If the target is Large or smaller, it must succeed on a Dexterity saving throw or have the Prone condition.
 
@@ -158,15 +158,15 @@ Your cunning mind is exceptionally difficult to control. You gain proficiency in
 
 ### Level 18: Elusive
 
-You are so evasive that attackers rarely gain the upper hand against you. No attack roll can have Advantage against you unless you have the Incapacitated condition.
+You're so evasive that attackers rarely gain the upper hand against you. No attack roll can have Advantage against you unless you have the Incapacitated condition.
 
 ### Level 19: Epic Boon
 
-You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.
+You gain an Epic Boon feat (see "Feats") or another feat of your choice for which you qualify. Boon of the Night Spirit is recommended.
 
 ### Level 20: Stroke of Luck
 
-You have an uncanny knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20.
+You have a marvelous knack for succeeding when you need to. If you fail a D20 Test, you can turn the roll into a 20.
 
 Once you use this feature, you can't use it again until you finish a Short or Long Rest.
 
@@ -183,15 +183,19 @@ A mix of burglar, treasure hunter, and explorer, you are the epitome of an adven
 
 #### Level 3: Fast Hands
 
-You have additional options for the Bonus Action of your Cunning Action, as detailed below.
-
-**Search.** Take the Search action.
+As a Bonus Action, you can do one of the following.
 
 **Sleight of Hand.** Make a Dexterity (Sleight of Hand) check to pick a lock or disarm a trap with Thieves' Tools or to pick a pocket.
 
+**Use an Object.** Take the Utilize action, or take the Magic action to use a magic item that requires that action.
+
 #### Level 3: Second-Story Work
 
-You've trained to get into places others would find inaccessible. You gain a Climb Speed equal to your Speed, and when you take the Jump action, the distance you can cover increases by a number of feet equal to your Dexterity modifier.
+You've trained to get into especially hard-to-reach places, granting you these benefits.
+
+**Climber.** You gain a Climb Speed equal to your Speed.
+
+**Jumper.** You can determine your jump distance using your Dexterity rather than your Strength.
 
 #### Level 9: Supreme Sneak
 
@@ -201,8 +205,14 @@ You gain the following Cunning Strike option.
 
 #### Level 13: Use Magic Device
 
-In your treasure hunting, you've learned how to maximize use of magic items. You ignore all class, species, and level requirements on the use of magic items.
+You've learned how to maximize use of magic items, granting you the following benefits.
+
+**Attunement.** You can attune to up to four magic items at once.
+
+**Charges.** Whenever you use a magic item property that expends charges, roll 1d6. On a roll of 6, you use the property without expending the charges.
+
+**Scrolls.** You can use any Spell Scroll, using Intelligence as your spellcasting ability for the spell. If the spell is a cantrip or a level 1 spell, you can cast it reliably. If the scroll contains a higher-level spell, you must first succeed on an Intelligence (Arcana) check (DC 10 plus the spell's level). On a successful check, you cast the spell from the scroll. On a failed check, the scroll disintegrates.
 
 #### Level 17: Thief's Reflexes
 
-You have become adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10. You can't use this feature when you are surprised.
+You are adept at laying ambushes and quickly escaping danger. You can take two turns during the first round of any combat. You take your first turn at your normal Initiative and your second turn at your Initiative minus 10.

@@ -55,6 +55,8 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 | 19 | +6 | Epic Boon | 4 | 15 |
 | 20 | +6 | Foe Slayer | 4 | 15 |
 
+**Base Class Features by Tier**
+
 <Tabs items={['Tier 1 (Levels 1-4)', 'Tier 2 (Levels 5-10)', 'Tier 3 (Levels 11-16)', 'Tier 4 (Levels 17-20)']}>
 <Tab value="Tier 1 (Levels 1-4)">
 
@@ -94,13 +96,13 @@ Thanks to your travels, you gain the following benefits.
 
 **Expertise.** Choose one of your skill proficiencies with which you lack Expertise. You gain Expertise in that skill.
 
-**Languages.** You know two languages of your choice from the language tables in "Rules Glossary."
+**Languages.** You know two languages of your choice from the language tables in "Character Creation."
 
 ### Level 2: Fighting Style
 
-You gain a Fighting Style feat of your choice. Archery is recommended.
+You gain a Fighting Style feat of your choice (see "Feats"). Instead of choosing one of those feats, you can choose the option below.
 
-Whenever you gain a Ranger level, you can replace the feat you chose with a different Fighting Style feat.
+**Druidic Warrior.** You learn two Druid cantrips of your choice (see the Druid class's section for a list of Druid spells). Guidance and Starry Wisp are recommended. The chosen cantrips count as Ranger spells for you, and Wisdom is your spellcasting ability for them. Whenever you gain a Ranger level, you can replace one of these cantrips with another Druid cantrip.
 
 ### Level 3: Ranger Subclass
 
@@ -108,7 +110,7 @@ You gain a Ranger subclass of your choice. The Hunter subclass is detailed after
 
 ### Level 4: Ability Score Improvement
 
-You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16.
+You gain the Ability Score Improvement feat (see "Feats") or another feat of your choice for which you qualify. You gain this feature again at Ranger levels 8, 12, and 16.
 
 </Tab>
 <Tab value="Tier 2 (Levels 5-10)">
@@ -129,7 +131,7 @@ Choose two of your skill proficiencies with which you lack Expertise. You gain E
 
 Primal forces now help fuel you on your journeys, granting you the following benefits.
 
-**Temporary Hit Points.** As a Bonus Action, you can give yourself a number of Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum of 1 Temporary Hit Point). You can use this action a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.
+**Temporary Hit Points.** As a Magic action, you can give yourself a number of Temporary Hit Points equal to 1d8 plus your Wisdom modifier (minimum of 1). You can use this action a number of times equal to your Wisdom modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.
 
 **Decrease Exhaustion.** Whenever you finish a Short Rest, your Exhaustion level, if any, decreases by 1.
 
@@ -159,11 +161,11 @@ Your connection to the forces of nature grants you Blindsight with a range of 30
 
 ### Level 19: Epic Boon
 
-You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.
+You gain an Epic Boon feat (see "Feats") or another feat of your choice for which you qualify. Boon of Dimensional Travel is recommended.
 
 ### Level 20: Foe Slayer
 
-The damage die of your Hunter's Mark is now a d10 rather than a d6.
+The damage die of your Hunter's Mark is a d10 rather than a d6.
 
 </Tab>
 </Tabs>
@@ -223,7 +225,6 @@ This section presents the Ranger spell list. The spells are organized by spell l
 | Entangle | Conjuration | C |
 | Fog Cloud | Conjuration | C |
 | Goodberry | Conjuration | — |
-| Hail of Thorns | Conjuration | — |
 | Hunter's Mark | Divination | C |
 | Jump | Transmutation | — |
 | Longstrider | Transmutation | — |
@@ -236,8 +237,6 @@ This section presents the Ranger spell list. The spells are organized by spell l
 | Aid | Abjuration | — |
 | Animal Messenger | Enchantment | R |
 | Barkskin | Transmutation | — |
-| Beast Sense | Divination | C, R |
-| Cordon of Arrows | Transmutation | — |
 | Darkvision | Transmutation | — |
 | Enhance Ability | Transmutation | C |
 | Find Traps | Divination | — |
@@ -250,25 +249,20 @@ This section presents the Ranger spell list. The spells are organized by spell l
 | Protection from Poison | Abjuration | — |
 | Silence | Illusion | C, R |
 | Spike Growth | Transmutation | C |
-| Summon Beast | Conjuration | C, M |
 
 ### Level 3
 
 | Spell | School | Special |
 |-------|--------|---------|
 | Conjure Animals | Conjuration | C |
-| Conjure Barrage | Conjuration | — |
 | Daylight | Evocation | — |
 | Dispel Magic | Abjuration | — |
-| Elemental Weapon | Transmutation | C |
-| Lightning Arrow | Transmutation | — |
 | Meld into Stone | Transmutation | R |
 | Nondetection | Abjuration | M |
 | Plant Growth | Transmutation | — |
 | Protection from Energy | Abjuration | C |
 | Revivify | Necromancy | M |
 | Speak with Plants | Transmutation | — |
-| Summon Fey | Conjuration | C, M |
 | Water Breathing | Transmutation | R |
 | Water Walk | Transmutation | R |
 | Wind Wall | Evocation | C |
@@ -280,18 +274,13 @@ This section presents the Ranger spell list. The spells are organized by spell l
 | Conjure Woodland Beings | Conjuration | C |
 | Dominate Beast | Enchantment | C |
 | Freedom of Movement | Abjuration | — |
-| Grasping Vine | Conjuration | C |
 | Locate Creature | Divination | C |
-| Stoneskin | Abjuration | C, M |
-| Summon Elemental | Conjuration | C, M |
+| Stoneskin | Transmutation | C, M |
 
 ### Level 5
 
 | Spell | School | Special |
 |-------|--------|---------|
 | Commune with Nature | Divination | R |
-| Conjure Volley | Conjuration | — |
 | Greater Restoration | Abjuration | M |
-| Steel Wind Strike | Conjuration | M |
-| Swift Quiver | Transmutation | C |
 | Tree Stride | Conjuration | C |
