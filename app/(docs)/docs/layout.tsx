@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         tree={source.pageTree}
         nav={{ enabled: false }}
         sidebar={{
-          defaultOpenLevel: 1,
+          defaultOpenLevel: 0,
           hideSearch: true,
         }}
       >

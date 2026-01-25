@@ -1,4 +1,14 @@
 {
   "title": "Gameplay Toolbox",
-  "pages": ["index", "travel", "hazards", "curses", "traps", "encounters"]
+  "pages": [
+    "index",
+    "travel-pace",
+    "creating-a-background",
+    "curses-and-magical-contagions",
+    "environmental-effects",
+    "fear-and-mental-stress",
+    "poison",
+    "traps",
+    "combat-encounters"
+  ]
 }

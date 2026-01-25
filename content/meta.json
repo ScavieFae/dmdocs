@@ -15,12 +15,8 @@
     "feats",
     "---Equipment---",
     "...equipment",
-    "---Magic Items---",
-    "magic-items",
-    "---Monsters---",
-    "monsters",
     "---Reference---",
-    "rules-glossary",
-    "toolbox"
+    "toolbox",
+    "rules-glossary"
   ]
 }
