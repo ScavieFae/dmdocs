@@ -10,11 +10,14 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 
 // Component to display spell stats in a consistent format
 function SpellStats({ data }: { data: any }) {
+  // Only render if this is actually a spell (has level defined)
+  if (data.level === undefined) return null;
+
   const levelText = data.level === 0 ? 'Cantrip' : `Level ${data.level}`;
   const components = [
-    data.components.verbal && 'V',
-    data.components.somatic && 'S',
-    data.components.material && `M (${data.components.material})`,
+    data.components?.verbal && 'V',
+    data.components?.somatic && 'S',
+    data.components?.material && `M (${data.components.material})`,
   ].filter(Boolean).join(', ');
 
   return (
@@ -29,9 +32,11 @@ function SpellStats({ data }: { data: any }) {
         <div><strong>Components:</strong> {components}</div>
         <div><strong>Duration:</strong> {data.duration}</div>
       </div>
-      <div className="mt-2 text-fd-muted-foreground">
-        <strong>Classes:</strong> {data.classes.join(', ')}
-      </div>
+      {data.classes && (
+        <div className="mt-2 text-fd-muted-foreground">
+          <strong>Classes:</strong> {data.classes.join(', ')}
+        </div>
+      )}
     </div>
   );
 }
@@ -45,10 +50,14 @@ export default async function Page({
   if (!page) notFound();
 
   const MDX = page.data.body;
+  const isSpell = page.data.level !== undefined;
 
   return (
     <DocsPage toc={page.data.toc}>
       <DocsTitle>{page.data.title}</DocsTitle>
+      {page.data.description && !isSpell && (
+        <DocsDescription>{page.data.description}</DocsDescription>
+      )}
       <SpellStats data={page.data} />
       <DocsBody>
         <MDX components={{ ...defaultMdxComponents }} />
@@ -70,10 +79,18 @@ export function generateMetadata({ params }: { params: { slug?: string[] } }) {
   const page = spellSource.getPage(params.slug);
   if (!page) notFound();
 
-  const levelText = page.data.level === 0 ? 'Cantrip' : `Level ${page.data.level}`;
+  // For spells, generate a richer description
+  if (page.data.level !== undefined) {
+    const levelText = page.data.level === 0 ? 'Cantrip' : `Level ${page.data.level}`;
+    return {
+      title: page.data.title,
+      description: `${levelText} ${page.data.school} spell. ${page.data.classes?.join(', ') || ''}.`,
+    };
+  }
 
+  // For non-spell pages, use standard metadata
   return {
     title: page.data.title,
-    description: `${levelText} ${page.data.school} spell. ${page.data.classes.join(', ')}.`,
+    description: page.data.description,
   };
 }

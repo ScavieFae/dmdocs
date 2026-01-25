@@ -1,10 +1,9 @@
-import { defineDocs, defineCollections, defineConfig } from 'fumadocs-mdx/config';
+import { defineDocs, defineConfig, frontmatterSchema } from 'fumadocs-mdx/config';
 import { z } from 'zod';
 
-// Spell schema - structured data for the spellbook
-const spellSchema = z.object({
-  title: z.string(),
-  level: z.number().min(0).max(9), // 0 = cantrip
+// Spell schema - extends base frontmatter with spell-specific fields
+const spellSchema = frontmatterSchema.extend({
+  level: z.number().min(0).max(9).optional(), // 0 = cantrip
   school: z.enum([
     'Abjuration',
     'Conjuration',
@@ -14,19 +13,18 @@ const spellSchema = z.object({
     'Illusion',
     'Necromancy',
     'Transmutation',
-  ]),
-  castingTime: z.string(),
-  range: z.string(),
+  ]).optional(),
+  castingTime: z.string().optional(),
+  range: z.string().optional(),
   components: z.object({
     verbal: z.boolean(),
     somatic: z.boolean(),
     material: z.string().optional(),
-  }),
-  duration: z.string(),
+  }).optional(),
+  duration: z.string().optional(),
   concentration: z.boolean().default(false),
   ritual: z.boolean().default(false),
-  classes: z.array(z.string()),
-  // Optional: description of higher-level casting
+  classes: z.array(z.string()).optional(),
   higherLevel: z.string().optional(),
 });
 
@@ -51,10 +49,14 @@ export const { docs: bestiaryDocs, meta: bestiaryMeta } = defineDocs({
 });
 
 // Spellbook (spell reference with typed frontmatter)
-export const spells = defineCollections({
-  type: 'doc',
-  dir: 'spellbook',
-  schema: spellSchema,
+export const { docs: spellDocs, meta: spellMeta } = defineDocs({
+  docs: {
+    dir: 'spellbook',
+    schema: spellSchema,
+  },
+  meta: {
+    dir: 'spellbook',
+  },
 });
 
 export default defineConfig();

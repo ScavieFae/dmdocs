@@ -2,9 +2,13 @@
   "title": "Spellbook",
   "pages": [
     "index",
-    "fire-bolt",
-    "magic-missile",
-    "detect-magic",
-    "fireball"
+    "abjuration",
+    "conjuration",
+    "divination",
+    "enchantment",
+    "evocation",
+    "illusion",
+    "necromancy",
+    "transmutation"
   ]
 }

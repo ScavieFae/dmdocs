@@ -1,4 +1,4 @@
-import { docs, meta, bestiaryDocs, bestiaryMeta, spells } from '@/.source';
+import { docs, meta, bestiaryDocs, bestiaryMeta, spellDocs, spellMeta } from '@/.source';
 import { createMDXSource } from 'fumadocs-mdx';
 import { loader } from 'fumadocs-core/source';
 
@@ -14,10 +14,10 @@ export const bestiarySource = loader({
   source: createMDXSource(bestiaryDocs, bestiaryMeta),
 });
 
-// Spellbook source - uses collection (no meta file needed)
+// Spellbook source
 export const spellSource = loader({
   baseUrl: '/spellbook',
-  source: createMDXSource(spells, []),
+  source: createMDXSource(spellDocs, spellMeta),
 });
 
 // Helper to get all spells with their typed data
@@ -38,6 +38,6 @@ export function getSpellsBySchool(school: string) {
 // Helper to filter spells by class
 export function getSpellsByClass(className: string) {
   return getAllSpells().filter(spell =>
-    spell.data.classes.includes(className)
+    spell.data.classes?.includes(className)
   );
 }
