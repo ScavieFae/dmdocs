@@ -1,4 +1,32 @@
 {
   "title": "Necromancy",
-  "pages": []
+  "pages": [
+    "animate-dead",
+    "astral-projection",
+    "bestow-curse",
+    "blight",
+    "chill-touch",
+    "circle-of-death",
+    "clone",
+    "create-undead",
+    "eyebite",
+    "false-life",
+    "finger-of-death",
+    "gentle-repose",
+    "harm",
+    "inflict-wounds",
+    "magic-jar",
+    "poison-spray",
+    "raise-dead",
+    "ray-of-enfeeblement",
+    "ray-of-sickness",
+    "reincarnate",
+    "resurrection",
+    "revivify",
+    "spare-the-dying",
+    "speak-with-dead",
+    "true-resurrection",
+    "vampiric-touch"
+  ],
+  "defaultOpen": false
 }

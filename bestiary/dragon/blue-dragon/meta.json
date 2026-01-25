@@ -1,0 +1,10 @@
+{
+  "title": "Blue Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Fey",
+  "pages": [
+    "goblins",
+    "hobgoblins",
+    "bugbears",
+    "hags",
+    "blink-dog",
+    "centaur-trooper",
+    "dryad",
+    "satyr",
+    "sprite",
+    "worg"
+  ],
+  "defaultOpen": false
+}

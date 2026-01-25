@@ -1,0 +1,10 @@
+{
+  "title": "Red Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

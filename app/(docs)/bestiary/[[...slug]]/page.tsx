@@ -7,6 +7,7 @@ import {
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
+import { MonsterStats } from "@/components/monster-stats";
 
 export default async function Page({
   params,
@@ -17,11 +18,15 @@ export default async function Page({
   if (!page) notFound();
 
   const MDX = page.data.body;
+  const isMonster = page.data.creatureType !== undefined;
 
   return (
     <DocsPage toc={page.data.toc}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+      {page.data.description && !isMonster && (
+        <DocsDescription>{page.data.description}</DocsDescription>
+      )}
+      <MonsterStats data={page.data} />
       <DocsBody>
         <MDX components={{ ...defaultMdxComponents }} />
       </DocsBody>
@@ -36,6 +41,14 @@ export async function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug?: string[] } }) {
   const page = bestiarySource.getPage(params.slug);
   if (!page) notFound();
+
+  // For monsters, generate a richer description
+  if (page.data.creatureType !== undefined) {
+    return {
+      title: page.data.title,
+      description: `${page.data.size} ${page.data.creatureType}. CR ${page.data.cr}.`,
+    };
+  }
 
   return {
     title: page.data.title,

@@ -1,0 +1,17 @@
+{
+  "title": "Elemental",
+  "pages": [
+    "elementals",
+    "mephits",
+    "azer-sentinel",
+    "djinni",
+    "efreeti",
+    "gargoyle",
+    "invisible-stalker",
+    "magmin",
+    "merfolk-skirmisher",
+    "salamander",
+    "xorn"
+  ],
+  "defaultOpen": false
+}

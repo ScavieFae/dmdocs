@@ -1,0 +1,10 @@
+{
+  "title": "Golems",
+  "pages": [
+    "clay-golem",
+    "flesh-golem",
+    "stone-golem",
+    "iron-golem"
+  ],
+  "defaultOpen": false
+}

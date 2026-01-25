@@ -1,0 +1,12 @@
+{
+  "title": "Plant",
+  "pages": [
+    "awakened-shrub",
+    "awakened-tree",
+    "shambling-mound",
+    "shrieker-fungus",
+    "treant",
+    "violet-fungus"
+  ],
+  "defaultOpen": false
+}

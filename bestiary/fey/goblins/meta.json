@@ -1,0 +1,9 @@
+{
+  "title": "Goblins",
+  "pages": [
+    "minion",
+    "warrior",
+    "boss"
+  ],
+  "defaultOpen": false
+}

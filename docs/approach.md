@@ -244,10 +244,18 @@ This would be a simple API route that calls `getAllSpells()` and returns the dat
 
 ## Status
 
+### Spellbook
 - [x] Spellbook architecture and schema
-- [x] Sample spells (Fire Bolt, Magic Missile, Detect Magic, Fireball)
 - [x] Spell stats card component
-- [x] School-based sidebar organization
-- [ ] Extract remaining ~70 spells from SRD
+- [x] School-based sidebar organization (8 schools, collapsed by default)
+- [x] **323 spells imported** from community SRD markdown source
 - [ ] Build spell index pages with filtering
+- [ ] Add JSON API endpoint
+
+### Bestiary
+- [x] Bestiary architecture and monster schema
+- [x] Styled stat block component (burgundy wine theme)
+- [x] Creature type-based sidebar organization (14 types, collapsed by default)
+- [x] **329 monsters imported** (235 monsters + 94 animals/beasts)
+- [ ] Add CR-based filtering
 - [ ] Add JSON API endpoint

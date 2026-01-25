@@ -1,6 +1,50 @@
 import { defineDocs, defineConfig, frontmatterSchema } from 'fumadocs-mdx/config';
 import { z } from 'zod';
 
+// Monster schema - extends base frontmatter with monster-specific fields
+const monsterSchema = frontmatterSchema.extend({
+  size: z.enum(['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan']).optional(),
+  creatureType: z.string().optional(), // "Aberration", "Dragon (Chromatic)", "Beast", etc.
+  alignment: z.string().optional(),
+  ac: z.number().optional(),
+  hp: z.object({
+    average: z.number(),
+    formula: z.string(),
+  }).optional(),
+  speed: z.object({
+    walk: z.number().optional(),
+    fly: z.number().optional(),
+    swim: z.number().optional(),
+    burrow: z.number().optional(),
+    climb: z.number().optional(),
+  }).optional(),
+  abilities: z.object({
+    str: z.number(),
+    dex: z.number(),
+    con: z.number(),
+    int: z.number(),
+    wis: z.number(),
+    cha: z.number(),
+  }).optional(),
+  saves: z.object({
+    str: z.number().optional(),
+    dex: z.number().optional(),
+    con: z.number().optional(),
+    int: z.number().optional(),
+    wis: z.number().optional(),
+    cha: z.number().optional(),
+  }).optional(),
+  skills: z.array(z.string()).optional(), // ["Perception +10", "Stealth +7"]
+  immunities: z.array(z.string()).optional(),
+  resistances: z.array(z.string()).optional(),
+  vulnerabilities: z.array(z.string()).optional(),
+  conditionImmunities: z.array(z.string()).optional(),
+  senses: z.array(z.string()).optional(), // ["darkvision 120 ft.", "Passive Perception 20"]
+  languages: z.array(z.string()).optional(),
+  cr: z.string().optional(), // "10", "1/4", "0"
+  xp: z.number().optional(),
+});
+
 // Spell schema - extends base frontmatter with spell-specific fields
 const spellSchema = frontmatterSchema.extend({
   level: z.number().min(0).max(9).optional(), // 0 = cantrip
@@ -38,10 +82,11 @@ export const { docs, meta } = defineDocs({
   },
 });
 
-// Bestiary (monster reference)
+// Bestiary (monster reference with typed frontmatter)
 export const { docs: bestiaryDocs, meta: bestiaryMeta } = defineDocs({
   docs: {
     dir: 'bestiary',
+    schema: monsterSchema,
   },
   meta: {
     dir: 'bestiary',

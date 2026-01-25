@@ -1,0 +1,16 @@
+{
+  "title": "Giant",
+  "pages": [
+    "hill-giant",
+    "stone-giant",
+    "frost-giant",
+    "fire-giant",
+    "cloud-giant",
+    "storm-giant",
+    "ettin",
+    "ogre",
+    "troll",
+    "troll-limb"
+  ],
+  "defaultOpen": false
+}

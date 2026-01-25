@@ -1,0 +1,10 @@
+{
+  "title": "Gold Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

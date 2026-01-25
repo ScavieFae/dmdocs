@@ -1,0 +1,10 @@
+{
+  "title": "Copper Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

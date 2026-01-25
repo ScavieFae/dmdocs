@@ -1,0 +1,32 @@
+{
+  "title": "Humanoid",
+  "pages": [
+    "archmage",
+    "assassin",
+    "bandit",
+    "bandit-captain",
+    "berserker",
+    "commoner",
+    "cultist",
+    "cultist-fanatic",
+    "druid",
+    "gladiator",
+    "guard",
+    "guard-captain",
+    "knight",
+    "mage",
+    "noble",
+    "pirate",
+    "pirate-captain",
+    "priest",
+    "priest-acolyte",
+    "scout",
+    "spy",
+    "tough",
+    "tough-boss",
+    "vampire-familiar",
+    "warrior-infantry",
+    "warrior-veteran"
+  ],
+  "defaultOpen": false
+}

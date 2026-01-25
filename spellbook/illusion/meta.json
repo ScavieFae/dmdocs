@@ -1,4 +1,35 @@
 {
   "title": "Illusion",
-  "pages": []
+  "pages": [
+    "arcanists-magic-aura",
+    "blur",
+    "color-spray",
+    "creation",
+    "dancing-lights",
+    "disguise-self",
+    "dream",
+    "fear",
+    "greater-invisibility",
+    "hallucinatory-terrain",
+    "hypnotic-pattern",
+    "illusory-script",
+    "invisibility",
+    "magic-mouth",
+    "major-image",
+    "minor-illusion",
+    "mirage-arcane",
+    "mirror-image",
+    "mislead",
+    "phantasmal-force",
+    "phantasmal-killer",
+    "phantom-steed",
+    "programmed-illusion",
+    "project-image",
+    "seeming",
+    "silence",
+    "silent-image",
+    "simulacrum",
+    "weird"
+  ],
+  "defaultOpen": false
 }

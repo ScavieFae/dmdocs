@@ -1,0 +1,10 @@
+{
+  "title": "Silver Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

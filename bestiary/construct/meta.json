@@ -1,0 +1,13 @@
+{
+  "title": "Construct",
+  "pages": [
+    "golems",
+    "animated-armor",
+    "animated-flying-sword",
+    "animated-rug-of-smothering",
+    "gorgon",
+    "homunculus",
+    "shield-guardian"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Fiend",
+  "pages": [
+    "devils",
+    "demons",
+    "gnoll-warrior",
+    "hell-hound",
+    "incubus",
+    "lamia",
+    "night-hag",
+    "nightmare",
+    "oni",
+    "rakshasa",
+    "sahuagin-warrior",
+    "spirit-naga",
+    "succubus"
+  ],
+  "defaultOpen": false
+}

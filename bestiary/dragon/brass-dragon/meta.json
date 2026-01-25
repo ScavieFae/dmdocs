@@ -1,0 +1,10 @@
+{
+  "title": "Brass Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Green Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

@@ -30,13 +30,13 @@ body {
   --primary-foreground: 0 0% 9%;
 }
 
-/* Bestiary section - Blood red */
+/* Bestiary section - Burgundy wine */
 .theme-bestiary {
-  --primary: 5 80% 45%;
+  --primary: 350 70% 40%;
   --primary-foreground: 0 0% 98%;
 }
 .dark .theme-bestiary {
-  --primary: 5 80% 45%;
+  --primary: 350 70% 45%;
   --primary-foreground: 0 0% 98%;
 }
 

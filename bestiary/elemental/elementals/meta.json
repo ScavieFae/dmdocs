@@ -1,0 +1,10 @@
+{
+  "title": "Elementals",
+  "pages": [
+    "air-elemental",
+    "earth-elemental",
+    "fire-elemental",
+    "water-elemental"
+  ],
+  "defaultOpen": false
+}

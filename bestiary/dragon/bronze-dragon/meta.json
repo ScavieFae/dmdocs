@@ -1,0 +1,10 @@
+{
+  "title": "Bronze Dragon",
+  "pages": [
+    "wyrmling",
+    "young",
+    "adult",
+    "ancient"
+  ],
+  "defaultOpen": false
+}

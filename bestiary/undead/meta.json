@@ -1,0 +1,25 @@
+{
+  "title": "Undead",
+  "pages": [
+    "ghast",
+    "ghost",
+    "ghoul",
+    "lich",
+    "minotaur-skeleton",
+    "mummy",
+    "mummy-lord",
+    "ogre-zombie",
+    "shadow",
+    "skeleton",
+    "specter",
+    "swarm-of-crawling-claws",
+    "vampire",
+    "vampire-spawn",
+    "warhorse-skeleton",
+    "wight",
+    "will-o-wisp",
+    "wraith",
+    "zombie"
+  ],
+  "defaultOpen": false
+}

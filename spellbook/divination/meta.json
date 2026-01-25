@@ -1,6 +1,36 @@
 {
   "title": "Divination",
   "pages": [
-    "detect-magic"
-  ]
+    "arcane-eye",
+    "augury",
+    "clairvoyance",
+    "commune",
+    "commune-with-nature",
+    "comprehend-languages",
+    "contact-other-plane",
+    "detect-evil-and-good",
+    "detect-magic",
+    "detect-poison-and-disease",
+    "detect-thoughts",
+    "divination",
+    "find-traps",
+    "find-the-path",
+    "foresight",
+    "hunters-mark",
+    "identify",
+    "legend-lore",
+    "locate-animals-or-plants",
+    "locate-creature",
+    "locate-object",
+    "mind-spike",
+    "scrying",
+    "see-invisibility",
+    "sending",
+    "speak-with-animals",
+    "telepathic-bond",
+    "tongues",
+    "true-seeing",
+    "true-strike"
+  ],
+  "defaultOpen": false
 }

@@ -1,0 +1,10 @@
+{
+  "title": "Mephits",
+  "pages": [
+    "dust-mephit",
+    "ice-mephit",
+    "magma-mephit",
+    "steam-mephit"
+  ],
+  "defaultOpen": false
+}

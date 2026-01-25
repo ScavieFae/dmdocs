@@ -1,0 +1,22 @@
+{
+  "title": "Dragon",
+  "pages": [
+    "index",
+    "black-dragon",
+    "blue-dragon",
+    "brass-dragon",
+    "bronze-dragon",
+    "copper-dragon",
+    "gold-dragon",
+    "green-dragon",
+    "red-dragon",
+    "silver-dragon",
+    "white-dragon",
+    "dragon-turtle",
+    "half-dragon",
+    "kobold-warrior",
+    "pseudodragon",
+    "wyvern"
+  ],
+  "defaultOpen": false
+}
