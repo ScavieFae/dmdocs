@@ -1,0 +1,10 @@
+{
+  "title": "Spellbook",
+  "pages": [
+    "index",
+    "fire-bolt",
+    "magic-missile",
+    "detect-magic",
+    "fireball"
+  ]
+}

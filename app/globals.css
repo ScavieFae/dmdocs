@@ -40,6 +40,16 @@ body {
   --primary-foreground: 0 0% 98%;
 }
 
+/* Spellbook: deep teal */
+.theme-spellbook {
+  --primary: 182 70% 35%;
+  --primary-foreground: 0 0% 98%;
+}
+.dark .theme-spellbook {
+  --primary: 182 70% 40%;
+  --primary-foreground: 0 0% 98%;
+}
+
 /* Layout: inset sidebars from edge */
 :root {
   --fd-layout-offset: 0px;

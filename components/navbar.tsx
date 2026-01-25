@@ -5,11 +5,12 @@ import { usePathname } from "next/navigation";
 import { useSearchContext } from "fumadocs-ui/provider";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { Search, Home, BookOpen, Skull, Sun, Moon } from "lucide-react";
+import { Search, Home, BookOpen, Skull, Sun, Moon, ScanEye } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/docs", label: "Rules", icon: BookOpen },
+  { href: "/spellbook", label: "Spellbook", icon: ScanEye },
   { href: "/bestiary", label: "Bestiary", icon: Skull },
 ];
 
