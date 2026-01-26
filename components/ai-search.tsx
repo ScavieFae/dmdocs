@@ -36,14 +36,12 @@ function AISearchDialog({ onClose }: { onClose: () => void }) {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
-    sendMessage({ content: input, role: "user" });
+    sendMessage({ text: input });
     setInput("");
   };
 
   // Extract text content from message parts
   const getMessageContent = (msg: typeof messages[0]) => {
-    if (typeof msg.content === "string") return msg.content;
-    // Handle parts array format
     const parts = msg.parts;
     if (!parts) return "";
     return parts
