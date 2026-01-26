@@ -302,12 +302,19 @@ Based on docs-ai-era research:
 
 - [ ] **Frontmatter schema validator** — Script or pre-commit hook that validates MDX frontmatter against Zod schemas in `source.config.ts`. Would catch issues like missing required fields (e.g., `somatic: false` in spell components). Could be `npm run validate` or CI check on PRs.
 - [x] **Bestiary list audit** — Monster list matches SRD (330/330). Size metadata corrected (26 Tiny creatures were marked Small).
+- [x] **Lycanthrope fixes** — All 5 lycanthropes (Werebear, Wereboar, Wererat, Weretiger, Werewolf) fixed:
+  - Added "(Lycanthrope)" tag to creatureType
+  - Added alternate speeds for beast forms
+  - Size set to "Medium" (schema limitation, see below)
 - [ ] **Bestiary deep content audit** — Stat block text needs verification against SRD. Known issues found in sampling:
   - Earth Elemental was missing Thunder vulnerability (fixed)
-  - Some creatures with "Medium or Small" in SRD only show one size
   - Minor text simplifications in complex abilities (e.g., dragon Shapechange details)
   - Typos in action descriptions
   - Use `/audit-collection bestiary --deep` when ready for full pass
+
+### Schema Limitation: Multi-Size Creatures
+
+The SRD has creatures marked "Medium or Small" (lycanthropes, Vampire, etc.) but our schema only supports a single size value. Current workaround: use "Medium" as the primary size. A proper fix would require schema changes to support `size: ["Medium", "Small"]` or a `sizeOptions` field.
 
 ## Attribution (Required)
 
