@@ -10,9 +10,9 @@ body {
 
 /* ===== THEME COLORS ===== */
 
-/* Default/Brand - Light: moss, Dark: gold */
+/* Default/Brand - Gold (amber-shifted for light mode readability) */
 :root {
-  --primary: 90 55% 35%;
+  --primary: 38 85% 40%;
   --primary-foreground: 0 0% 98%;
 }
 .dark {
@@ -20,9 +20,9 @@ body {
   --primary-foreground: 0 0% 9%;
 }
 
-/* Rules section - Light: moss, Dark: gold */
+/* Rules section - Gold (amber-shifted for light mode readability) */
 .theme-rules {
-  --primary: 90 55% 35%;
+  --primary: 38 85% 40%;
   --primary-foreground: 0 0% 98%;
 }
 .dark .theme-rules {
