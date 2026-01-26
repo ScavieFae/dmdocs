@@ -301,7 +301,13 @@ Based on docs-ai-era research:
 ## Future Work (TODO)
 
 - [ ] **Frontmatter schema validator** — Script or pre-commit hook that validates MDX frontmatter against Zod schemas in `source.config.ts`. Would catch issues like missing required fields (e.g., `somatic: false` in spell components). Could be `npm run validate` or CI check on PRs.
-- [ ] **Bestiary audit** — Compare monster list against SRD, similar to spellbook audit
+- [x] **Bestiary list audit** — Monster list matches SRD (330/330). Size metadata corrected (26 Tiny creatures were marked Small).
+- [ ] **Bestiary deep content audit** — Stat block text needs verification against SRD. Known issues found in sampling:
+  - Earth Elemental was missing Thunder vulnerability (fixed)
+  - Some creatures with "Medium or Small" in SRD only show one size
+  - Minor text simplifications in complex abilities (e.g., dragon Shapechange details)
+  - Typos in action descriptions
+  - Use `/audit-collection bestiary --deep` when ready for full pass
 
 ## Attribution (Required)
 
