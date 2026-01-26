@@ -1,6 +1,7 @@
 {
   "title": "Potions",
   "pages": [
+    "elixir-of-health",
     "oil-of-etherealness",
     "oil-of-sharpness",
     "oil-of-slipperiness",
@@ -15,6 +16,8 @@
     "potion-of-growth",
     "potion-of-heroism",
     "potion-of-invisibility",
+    "potion-of-invulnerability",
+    "potion-of-longevity",
     "potion-of-mind-reading",
     "potion-of-poison",
     "potion-of-resistance",
