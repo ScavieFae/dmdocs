@@ -50,8 +50,6 @@ export function Navbar() {
     return pathname.startsWith(href);
   };
 
-  // Find the active section label for the mobile dropdown trigger
-  const activeSection = navLinks.find((link) => isActive(link.href));
 
   return (
     <header className="sticky top-0 z-50 border-b border-fd-border bg-fd-background/95 backdrop-blur supports-[backdrop-filter]:bg-fd-background/80 pt-3">
