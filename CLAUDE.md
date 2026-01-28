@@ -311,6 +311,16 @@ Based on docs-ai-era research:
   - Minor text simplifications in complex abilities (e.g., dragon Shapechange details)
   - Typos in action descriptions
   - Use `/audit-collection bestiary --deep` when ready for full pass
+- [ ] **Headless batch processing** — Use Claude Code fan-out pattern for 500+ MDX entries:
+  1. Generate file list: `claude -p "List all spellbook MDX files that need rarity metadata"`
+  2. Loop with scoped tools: `for file in $(cat files.txt); do claude -p "Verify @$file against SRD" --allowedTools "Read,Grep"; done`
+  3. Test on 2-3 files, refine prompt, then run at scale
+  - Use cases: SRD verification, metadata fixes, content audits, bulk formatting
+  - See: rnd-2026/coding/claude-code/allowed-tools.md for tool scoping
+- [ ] **Mobile responsiveness** — Fumadocs horizontal nav tabs get cut off on mobile (Magic Items not visible). Need to review:
+  - Nav tab overflow/scrolling behavior
+  - General mobile layout testing
+  - Homepage card grid on small screens
 
 ### Schema Limitation: Multi-Size Creatures
 

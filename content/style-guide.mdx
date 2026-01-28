@@ -1,12 +1,77 @@
 ---
 title: Style Guide
 description: Visual reference for typography, components, and patterns
+source: created
 ---
 
 import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import { Callout } from 'fumadocs-ui/components/callout';
 
 This page shows all styling elements in one place for comparison and iteration.
+
+---
+
+## Font Sandbox
+
+Candidate display fonts for headings and the homepage masthead. Body text stays Inter.
+
+### Display Fonts — Heading Samples
+
+<div className="space-y-6 my-6">
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">Alegreya — literary, calligraphic</p>
+    <p style={{ fontFamily: "var(--font-alegreya)" }} className="text-3xl font-bold">DMDocs</p>
+    <p style={{ fontFamily: "var(--font-alegreya)" }} className="text-xl font-semibold">Rules · Spellbook · Bestiary · Magic Items</p>
+    <p style={{ fontFamily: "var(--font-alegreya)" }} className="text-lg">The quick brown fox jumps over the lazy dog</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">Vollkorn — sturdy, scholarly</p>
+    <p style={{ fontFamily: "var(--font-vollkorn)" }} className="text-3xl font-bold">DMDocs</p>
+    <p style={{ fontFamily: "var(--font-vollkorn)" }} className="text-xl font-semibold">Rules · Spellbook · Bestiary · Magic Items</p>
+    <p style={{ fontFamily: "var(--font-vollkorn)" }} className="text-lg">The quick brown fox jumps over the lazy dog</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">Crimson Pro — elegant, scholarly</p>
+    <p style={{ fontFamily: "var(--font-crimson)" }} className="text-3xl font-bold">DMDocs</p>
+    <p style={{ fontFamily: "var(--font-crimson)" }} className="text-xl font-semibold">Rules · Spellbook · Bestiary · Magic Items</p>
+    <p style={{ fontFamily: "var(--font-crimson)" }} className="text-lg">The quick brown fox jumps over the lazy dog</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">Space Grotesk — geometric, modern</p>
+    <p style={{ fontFamily: "var(--font-space-grotesk)" }} className="text-3xl font-bold">DMDocs</p>
+    <p style={{ fontFamily: "var(--font-space-grotesk)" }} className="text-xl font-semibold">Rules · Spellbook · Bestiary · Magic Items</p>
+    <p style={{ fontFamily: "var(--font-space-grotesk)" }} className="text-lg">The quick brown fox jumps over the lazy dog</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">Lexend — readable, slightly quirky</p>
+    <p style={{ fontFamily: "var(--font-lexend)" }} className="text-3xl font-bold">DMDocs</p>
+    <p style={{ fontFamily: "var(--font-lexend)" }} className="text-xl font-semibold">Rules · Spellbook · Bestiary · Magic Items</p>
+    <p style={{ fontFamily: "var(--font-lexend)" }} className="text-lg">The quick brown fox jumps over the lazy dog</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">Inter (current) — baseline</p>
+    <p className="text-3xl font-bold">DMDocs</p>
+    <p className="text-xl font-semibold">Rules · Spellbook · Bestiary · Magic Items</p>
+    <p className="text-lg">The quick brown fox jumps over the lazy dog</p>
+  </div>
+</div>
+
+### Monospace Fonts — Count/Data Samples
+
+<div className="space-y-4 my-6">
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">JetBrains Mono</p>
+    <p style={{ fontFamily: "var(--font-jetbrains)" }} className="text-sm">339 spells · 330 monsters · 257 items · 100+ pages · CR 0–30</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">IBM Plex Mono</p>
+    <p style={{ fontFamily: "var(--font-ibm-mono)" }} className="text-sm">339 spells · 330 monsters · 257 items · 100+ pages · CR 0–30</p>
+  </div>
+  <div className="border border-fd-border rounded-lg p-4">
+    <p className="text-xs text-fd-muted-foreground mb-2 font-mono">System monospace (current)</p>
+    <p className="text-sm font-mono">339 spells · 330 monsters · 257 items · 100+ pages · CR 0–30</p>
+  </div>
+</div>
 
 ---
 
@@ -101,78 +166,6 @@ Muted, desaturated colors that feel like a wizard's study.
     <span className="font-medium w-32">Dusty Violet</span>
     <code className="text-sm">270 35% 45%</code>
     <span className="text-fd-muted-foreground text-sm">Arcane, aged magic</span>
-  </div>
-</div>
-
-### Game Rarity Colors (WoW/Blizzard/WotC Convention)
-
-Classic item rarity colors - instantly recognizable to gamers.
-
-<div className="space-y-2 my-4">
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(0, 0%, 62%)" }} />
-    <span className="font-medium w-32">Common</span>
-    <code className="text-sm">0 0% 62%</code>
-    <span className="text-fd-muted-foreground text-sm">Gray, basic items</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(120, 60%, 45%)" }} />
-    <span className="font-medium w-32">Uncommon</span>
-    <code className="text-sm">120 60% 45%</code>
-    <span className="text-fd-muted-foreground text-sm">Green, slightly better</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(220, 80%, 55%)" }} />
-    <span className="font-medium w-32">Rare</span>
-    <code className="text-sm">220 80% 55%</code>
-    <span className="text-fd-muted-foreground text-sm">Blue, quality gear</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(280, 70%, 55%)" }} />
-    <span className="font-medium w-32">Epic</span>
-    <code className="text-sm">280 70% 55%</code>
-    <span className="text-fd-muted-foreground text-sm">Purple, powerful items</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(35, 100%, 50%)" }} />
-    <span className="font-medium w-32">Legendary</span>
-    <code className="text-sm">35 100% 50%</code>
-    <span className="text-fd-muted-foreground text-sm">Orange, iconic loot</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(45, 100%, 60%)" }} />
-    <span className="font-medium w-32">Artifact</span>
-    <code className="text-sm">45 100% 60%</code>
-    <span className="text-fd-muted-foreground text-sm">Gold, mythic tier</span>
-  </div>
-</div>
-
-**Monster/Enemy Reds:**
-
-<div className="space-y-2 my-4">
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(5, 80%, 45%)" }} />
-    <span className="font-medium w-32">Blood Red</span>
-    <code className="text-sm">5 80% 45%</code>
-    <span className="text-fd-muted-foreground text-sm">Deep, visceral, Diablo-esque</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(0, 75%, 50%)" }} />
-    <span className="font-medium w-32">Danger Red</span>
-    <code className="text-sm">0 75% 50%</code>
-    <span className="text-fd-muted-foreground text-sm">Classic enemy nameplate</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(355, 85%, 52%)" }} />
-    <span className="font-medium w-32">Crimson Bright</span>
-    <code className="text-sm">355 85% 52%</code>
-    <span className="text-fd-muted-foreground text-sm">Vibrant, hostile</span>
-  </div>
-  <div className="flex items-center gap-3">
-    <div className="w-8 h-8 rounded-md" style={{ backgroundColor: "hsl(0, 70%, 55%)" }} />
-    <span className="font-medium w-32">WoW Hostile</span>
-    <code className="text-sm">0 70% 55%</code>
-    <span className="text-fd-muted-foreground text-sm">Enemy health bar red</span>
   </div>
 </div>
 

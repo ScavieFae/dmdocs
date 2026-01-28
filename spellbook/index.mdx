@@ -1,32 +1,59 @@
 ---
 title: Spellbook
-description: Browse spells by school of magic
+description: All 339 spells from the SRD, organized by school of magic
+source: created
 ---
 
-# Spellbook
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Sparkles, BookOpen, Wand2 } from 'lucide-react';
 
-Browse spells organized by their school of magic. Each school represents a different approach to manipulating magical energy.
+The complete spell reference for D&D 5e — 339 spells from cantrips to 9th level, organized by school of magic.
+
+Use **⌘K** to search for any spell by name, or browse by school:
+
+<Cards className="grid-cols-3">
+  <Card
+    icon={<Sparkles />}
+    title="Find a Spell"
+    description="Search by name, or browse the schools below."
+    href="/spellbook/evocation"
+  />
+  <Card
+    icon={<BookOpen />}
+    title="Spell Rules"
+    description="Components, concentration, rituals, and casting."
+    href="/docs/rules-glossary"
+  />
+  <Card
+    icon={<Wand2 />}
+    title="Class Spell Lists"
+    description="See which spells your class can learn."
+    href="/docs/classes"
+  />
+</Cards>
+
+<Callout title="See an error?" type="warn">
+Help us improve by [reporting it](https://github.com/ScavieFae/dmdocs/issues).
+</Callout>
 
 ## Schools of Magic
 
-| School | Description |
-|--------|-------------|
-| **[Abjuration](/spellbook/abjuration)** | Protective wards, banishment, and defensive magic |
-| **[Conjuration](/spellbook/conjuration)** | Summoning creatures, creating objects, teleportation |
-| **[Divination](/spellbook/divination)** | Knowledge, foresight, scrying, and detection |
-| **[Enchantment](/spellbook/enchantment)** | Mind-affecting magic, charms, and compulsions |
-| **[Evocation](/spellbook/evocation)** | Raw energy manipulation—fire, lightning, force |
-| **[Illusion](/spellbook/illusion)** | Deception, phantasms, and sensory manipulation |
-| **[Necromancy](/spellbook/necromancy)** | Life force manipulation, death, and undeath |
-| **[Transmutation](/spellbook/transmutation)** | Transformation, alteration, and enhancement |
+| School | Focus |
+|--------|-------|
+| **[Abjuration](/spellbook/abjuration)** | Protection, wards, banishment |
+| **[Conjuration](/spellbook/conjuration)** | Summoning, teleportation, creation |
+| **[Divination](/spellbook/divination)** | Knowledge, foresight, detection |
+| **[Enchantment](/spellbook/enchantment)** | Mind-affecting magic, charms |
+| **[Evocation](/spellbook/evocation)** | Energy manipulation — fire, lightning, force |
+| **[Illusion](/spellbook/illusion)** | Phantasms, deception, sensory tricks |
+| **[Necromancy](/spellbook/necromancy)** | Life force, death, undeath |
+| **[Transmutation](/spellbook/transmutation)** | Transformation, alteration |
 
-## Spell Components
+## Quick Reference
 
-- **V (Verbal)** — Spoken incantations
-- **S (Somatic)** — Precise hand gestures
-- **M (Material)** — Physical components (consumed if a cost is listed)
+**Components:** V (verbal), S (somatic), M (material — consumed if cost listed)
 
-## Special Properties
+**Concentration:** Requires focus; ends if you take damage or cast another concentration spell.
 
-- **Concentration** — Requires maintained focus; broken by damage or casting another concentration spell
-- **Ritual** — Can be cast without expending a spell slot by adding 10 minutes to the casting time
+**Ritual:** Add 10 minutes to cast without using a spell slot.

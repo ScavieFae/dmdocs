@@ -1,34 +1,64 @@
 ---
 title: Bestiary
-description: Monster reference organized by creature type
+description: 330 monsters from the SRD, organized by creature type
+source: created
 ---
 
-# Bestiary
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Skull, Target, BookOpen } from 'lucide-react';
 
-Browse monsters organized by creature type. Each type represents a different category of being in the D&D multiverse.
+The complete monster reference for D&D 5e — 330 creatures from CR 0 to CR 30, organized by creature type.
+
+Use **⌘K** to search for any monster by name, or browse by type:
+
+<Cards className="grid-cols-3">
+  <Card
+    icon={<Skull />}
+    title="Find a Monster"
+    description="Search by name, or browse creature types below."
+    href="/bestiary/dragon"
+  />
+  <Card
+    icon={<Target />}
+    title="Build an Encounter"
+    description="Guidelines for balancing combat encounters."
+    href="/docs/toolbox/combat-encounters"
+  />
+  <Card
+    icon={<BookOpen />}
+    title="Combat Rules"
+    description="Initiative, attacks, damage, and conditions."
+    href="/docs/combat/order-and-initiative"
+  />
+</Cards>
+
+<Callout title="See an error?" type="warn">
+Help us improve by [reporting it](https://github.com/ScavieFae/dmdocs/issues).
+</Callout>
 
 ## Creature Types
 
 | Type | Description |
 |------|-------------|
-| **[Aberration](/bestiary/aberration)** | Utterly alien beings from beyond the planes |
-| **[Beast](/bestiary/beast)** | Natural animals and giant versions thereof |
-| **[Celestial](/bestiary/celestial)** | Beings of the Upper Planes, often divine servants |
-| **[Construct](/bestiary/construct)** | Magically created creatures and automatons |
+| **Aberration** | Alien beings from beyond the planes |
+| **Beast** | Natural animals and giant versions |
+| **[Celestial](/bestiary/celestial)** | Divine servants of the Upper Planes |
+| **[Construct](/bestiary/construct)** | Magically created automatons |
 | **[Dragon](/bestiary/dragon)** | Ancient scaled beings of immense power |
 | **[Elemental](/bestiary/elemental)** | Creatures of pure elemental essence |
-| **[Fey](/bestiary/fey)** | Magical beings tied to nature and the Feywild |
-| **[Fiend](/bestiary/fiend)** | Evil beings from the Lower Planes |
-| **[Giant](/bestiary/giant)** | Towering humanoids of tremendous strength |
-| **[Humanoid](/bestiary/humanoid)** | People of various species and professions |
-| **[Monstrosity](/bestiary/monstrosity)** | Unnatural creatures with strange origins |
-| **[Ooze](/bestiary/ooze)** | Mindless, gelatinous predators |
-| **[Plant](/bestiary/plant)** | Sentient vegetation and fungal creatures |
-| **[Undead](/bestiary/undead)** | Spirits and reanimated corpses |
+| **[Fey](/bestiary/fey)** | Magical beings of nature and the Feywild |
+| **[Fiend](/bestiary/fiend)** | Devils and demons of the Lower Planes |
+| **Giant** | Towering humanoids of great strength |
+| **Humanoid** | People of various species |
+| **Monstrosity** | Unnatural creatures with strange origins |
+| **Ooze** | Mindless, gelatinous predators |
+| **Plant** | Sentient vegetation and fungi |
+| **Undead** | Spirits and reanimated corpses |
 
-## Reading a Stat Block
+## Stat Block Quick Reference
 
-- **AC** - Armor Class, the target number to hit
-- **HP** - Hit Points, with average and dice formula
-- **Speed** - Movement in feet per round
-- **CR** - Challenge Rating, a rough measure of threat level
+- **AC** — Armor Class (target to hit)
+- **HP** — Hit Points (average and dice formula)
+- **Speed** — Movement per round in feet
+- **CR** — Challenge Rating (threat level and XP)

@@ -1,6 +1,7 @@
 {
   "title": "Combat",
   "pages": [
+    "index",
     "order-and-initiative",
     "movement-and-position",
     "attacks",

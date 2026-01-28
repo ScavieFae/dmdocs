@@ -3,7 +3,6 @@
   "root": true,
   "pages": [
     "index",
-    "style-guide",
     "---Rules---",
     "playing-the-game",
     "combat",
@@ -17,6 +16,10 @@
     "origins",
     "feats",
     "---Equipment---",
-    "...equipment"
+    "...equipment",
+    "---About---",
+    "community",
+    "contribute",
+    "style-guide"
   ]
 }

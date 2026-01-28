@@ -1,39 +1,67 @@
 ---
 title: Magic Items
-description: Wondrous treasures and enchanted equipment from the SRD
+description: 257 wondrous treasures and enchanted equipment from the SRD
+source: created
 ---
 
-# Magic Items
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { Gem, Sparkles, BookOpen } from 'lucide-react';
 
-Magic items are gleaned from the hoards of conquered monsters or discovered in long-lost vaults. Such items grant capabilities a character could rarely have otherwise, or they complement their owner's capabilities in wondrous ways.
+Enchanted treasures from the SRD — 257 magic items from Common to Artifact rarity, organized by category.
+
+Use **⌘K** to search for any item by name, or browse by category:
+
+<Cards className="grid-cols-3">
+  <Card
+    icon={<Gem />}
+    title="Find an Item"
+    description="Search by name, or browse categories below."
+    href="/magicitems/wondrous-items"
+  />
+  <Card
+    icon={<Sparkles />}
+    title="Item Rules"
+    description="Attunement, identification, and item properties."
+    href="/docs/equipment/magic-item-mechanics"
+  />
+  <Card
+    icon={<BookOpen />}
+    title="Crafting Items"
+    description="Rules for brewing potions and scribing scrolls."
+    href="/docs/equipment/magic-item-mechanics/brewing-and-scribing"
+  />
+</Cards>
+
+<Callout title="See an error?" type="warn">
+Help us improve by [reporting it](https://github.com/ScavieFae/dmdocs/issues).
+</Callout>
 
 ## Item Categories
 
-| Category | Description |
-|----------|-------------|
-| [Armor](armor) | Enchanted suits of armor and shields |
-| [Potions](potions) | Magical liquids with various effects |
-| [Rings](rings) | Enchanted bands worn on fingers |
-| [Rods](rods) | Scepter-like devices with magical properties |
-| [Scrolls](scrolls) | Spell scrolls containing magical writings |
-| [Staffs](staffs) | Walking sticks imbued with magic |
-| [Wands](wands) | Thin batons that channel magic |
-| [Weapons](weapons) | Enchanted arms for combat |
-| [Wondrous Items](wondrous-items) | Miscellaneous magical objects |
+| Category | Contents |
+|----------|----------|
+| **[Armor](/magicitems/armor)** | Enchanted suits and shields |
+| **[Potions](/magicitems/potions)** | Magical liquids |
+| **[Rings](/magicitems/rings)** | Enchanted bands |
+| **[Rods](/magicitems/rods)** | Scepter-like devices |
+| **[Scrolls](/magicitems/scrolls)** | Spell scrolls |
+| **[Staffs](/magicitems/staffs)** | Magical walking sticks |
+| **[Wands](/magicitems/wands)** | Thin batons of magic |
+| **[Weapons](/magicitems/weapons)** | Enchanted arms |
+| **[Wondrous Items](/magicitems/wondrous-items)** | Everything else |
 
 ## Rarity
 
-Magic items have a rarity that reflects how difficult they are to find:
-
-| Rarity | Character Level |
+| Rarity | Suggested Level |
 |--------|-----------------|
-| Common | 1st or higher |
-| Uncommon | 1st or higher |
-| Rare | 5th or higher |
-| Very Rare | 11th or higher |
-| Legendary | 17th or higher |
-| Artifact | Unique items of immense power |
+| Common | 1st+ |
+| Uncommon | 1st+ |
+| Rare | 5th+ |
+| Very Rare | 11th+ |
+| Legendary | 17th+ |
+| Artifact | Unique |
 
 ## Attunement
 
-Some magic items require a creature to form a bond with them before their magical properties can be used. This bond is called attunement. A creature can be attuned to no more than three magic items at a time.
+Some items require **attunement** — a bond formed during a short rest. A creature can attune to at most **3 items** at a time.

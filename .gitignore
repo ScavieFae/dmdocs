@@ -43,3 +43,9 @@ next-env.d.ts
 
 # lychee link checker cache
 .lycheecache
+
+# editor config
+.obsidian/
+
+# terminal recordings
+typescript

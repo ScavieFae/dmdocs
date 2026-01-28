@@ -7,6 +7,7 @@ import {
 } from "fumadocs-ui/page";
 import { notFound } from "next/navigation";
 import defaultMdxComponents from "fumadocs-ui/mdx";
+import { SourceBadge } from "@/components/source-badge";
 
 interface SpellData {
   level?: number;
@@ -70,9 +71,10 @@ export default async function Page({
   return (
     <DocsPage toc={page.data.toc}>
       <DocsTitle>{page.data.title}</DocsTitle>
-      {page.data.description && !isSpell && (
-        <DocsDescription>{page.data.description}</DocsDescription>
-      )}
+      <DocsDescription>
+        {page.data.description && !isSpell && page.data.description}
+        <SourceBadge source={page.data.source} />
+      </DocsDescription>
       <SpellStats data={page.data} />
       <DocsBody>
         <MDX components={{ ...defaultMdxComponents }} />

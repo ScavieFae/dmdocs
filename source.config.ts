@@ -1,8 +1,13 @@
 import { defineDocs, defineConfig, frontmatterSchema } from 'fumadocs-mdx/config';
 import { z } from 'zod';
 
-// Monster schema - extends base frontmatter with monster-specific fields
-const monsterSchema = frontmatterSchema.extend({
+// Base schema with content source flag
+const baseSchema = frontmatterSchema.extend({
+  source: z.enum(['srd', 'synthesized', 'created']).default('srd'),
+});
+
+// Monster schema - extends base with monster-specific fields
+const monsterSchema = baseSchema.extend({
   size: z.enum(['Tiny', 'Small', 'Medium', 'Large', 'Huge', 'Gargantuan']).optional(),
   creatureType: z.string().optional(), // "Aberration", "Dragon (Chromatic)", "Beast", etc.
   alignment: z.string().optional(),
@@ -46,7 +51,7 @@ const monsterSchema = frontmatterSchema.extend({
 });
 
 // Magic item schema - extends base frontmatter with item-specific fields
-const magicItemSchema = frontmatterSchema.extend({
+const magicItemSchema = baseSchema.extend({
   category: z.enum(['Armor', 'Potion', 'Ring', 'Rod', 'Scroll', 'Staff', 'Wand', 'Weapon', 'Wondrous Item']).optional(),
   rarity: z.enum(['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact']).optional(),
   itemType: z.string().optional(), // Subtype like "Shield", "Any Ammunition", etc.
@@ -60,7 +65,7 @@ const magicItemSchema = frontmatterSchema.extend({
 });
 
 // Spell schema - extends base frontmatter with spell-specific fields
-const spellSchema = frontmatterSchema.extend({
+const spellSchema = baseSchema.extend({
   level: z.number().min(0).max(9).optional(), // 0 = cantrip
   school: z.enum([
     'Abjuration',
@@ -90,6 +95,7 @@ const spellSchema = frontmatterSchema.extend({
 export const { docs, meta } = defineDocs({
   docs: {
     dir: 'content',
+    schema: baseSchema,
   },
   meta: {
     dir: 'content',

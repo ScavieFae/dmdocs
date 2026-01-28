@@ -93,7 +93,16 @@ export function Navbar() {
             )}
           </div>
 
-          <Link href="/" className="font-bold text-2xl shrink-0">
+          <Link href="/" className="font-bold text-2xl shrink-0 flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="h-8 w-8">
+              <mask id="hex-cuts">
+                <polygon points="16,1 28,8 28,24 16,31 4,24 4,8" fill="white"/>
+                <line x1="16" y1="0" x2="16" y2="32" stroke="black" strokeWidth="2.5"/>
+                <line x1="3" y1="7" x2="29" y2="25" stroke="black" strokeWidth="2.5"/>
+                <line x1="29" y1="7" x2="3" y2="25" stroke="black" strokeWidth="2.5"/>
+              </mask>
+              <polygon points="16,1 28,8 28,24 16,31 4,24 4,8" fill="#E8B923" mask="url(#hex-cuts)"/>
+            </svg>
             DMDocs
           </Link>
         </div>

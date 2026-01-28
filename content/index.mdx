@@ -1,43 +1,87 @@
 ---
 title: D&D 5e System Reference Document
 description: The complete SRD 5.2.1 - rules, classes, spells, monsters, and more
+source: created
 ---
 
-Welcome to **DMDocs**, an LLM-optimized documentation site for the Dungeons & Dragons 5th Edition System Reference Document.
+import { Card, Cards } from 'fumadocs-ui/components/card';
+import { Callout } from 'fumadocs-ui/components/callout';
+import { UserPlus, Swords, BookOpen, Search } from 'lucide-react';
 
-## Contents
+The **System Reference Document (SRD)** contains the core rules for D&D 5th Edition, released under Creative Commons. This site makes that content searchable, browsable, and quick to reference — whether you're mid-session or building a character.
 
-### Playing the Game
-- [Rhythm of Play](/docs/ptg-rhythm-of-play)
-- [The Six Abilities](/docs/ptg-the-six-abilities)
-- [D20 Tests](/docs/ptg-d20-tests)
-- [Proficiency](/docs/ptg-proficiency)
-- [Actions](/docs/ptg-actions)
-- [Social Interaction](/docs/ptg-social-interaction)
-- [Exploration](/docs/ptg-exploration)
-- [Combat](/docs/ptg-combat)
-- [Damage and Healing](/docs/ptg-damage-and-healing)
+Use **⌘K** (or **Ctrl+K**) to search, or start with one of these:
+
+<Cards>
+  <Card
+    icon={<UserPlus />}
+    title="Build a Character"
+    description="Classes, origins, feats, and the step-by-step character creation guide."
+    href="/docs/character-creation"
+  />
+  <Card
+    icon={<Swords />}
+    title="Run Combat"
+    description="Initiative, attacks, damage, movement, and the conditions quick reference."
+    href="/docs/combat"
+  />
+  <Card
+    icon={<BookOpen />}
+    title="Learn the Rules"
+    description="D20 tests, actions, ability scores, and the core mechanics of play."
+    href="/docs/playing-the-game"
+  />
+  <Card
+    icon={<Search />}
+    title="Find a Reference"
+    description="Rules glossary, conditions quick ref, and the gameplay toolbox."
+    href="/docs/rules-glossary"
+  />
+</Cards>
+
+<Callout title="Looking for spells, monsters, or magic items?" type="info">
+Check out the [Spellbook](/spellbook), [Bestiary](/bestiary), or [Magic Items](/magicitems) in the top navigation.
+</Callout>
+
+<Callout title="See an error?" type="warn">
+Help us improve by [reporting it](https://github.com/ScavieFae/dmdocs/issues).
+</Callout>
+
+## What's in the SRD?
+
+The SRD includes the essential rules, but not everything from the Player's Handbook. You'll find:
+
+- **12 classes** with one subclass each (Champion Fighter, Life Cleric, etc.)
+- **9 species** (Dwarf, Elf, Halfling, Human, Dragonborn, Gnome, Orc, Goliath, Tiefling)
+- **17 feats** (Origin, General, Fighting Style, and Epic Boon categories)
+- **Full combat rules**, conditions, and gameplay mechanics
+- **Equipment**, armor, and weapons tables
+
+For the complete class options, additional subclasses, or expanded content, you'll need the full sourcebooks.
+
+## Everything in This Section
+
+### Rules
+- [Playing the Game](/docs/playing-the-game) — Core mechanics, actions, D20 tests
+- [Combat](/docs/combat) — Initiative, attacks, damage, movement
+- [Gameplay Toolbox](/docs/toolbox) — Encounter building, traps, poisons, hazards
+- [Rules Glossary](/docs/rules-glossary) — Definitions and conditions
+- [Conditions Quick Ref](/docs/conditions-quickref) — At-a-glance condition summary
 
 ### Characters
-- [Character Creation](/docs/character-creation)
-- [Classes](/docs/classes)
-- [Origins](/docs/origins)
-- [Feats](/docs/feats)
+- [Character Creation](/docs/character-creation) — Step-by-step guide
+- [Classes](/docs/classes) — All 12 classes with subclasses
+- [Origins](/docs/origins) — Species and backgrounds
+- [Feats](/docs/feats) — All 17 SRD feats
+- [Level Advancement](/docs/level-advancement) — XP and leveling
 
-### Gear & Magic
-- [Equipment](/docs/equipment)
-- [Spells](/docs/spells)
-- [Magic Items](/docs/magic-items)
-
-### Creatures
-- [Monsters](/docs/monsters)
-
-### Reference
-- [Rules Glossary](/docs/rules-glossary)
-- [Gameplay Toolbox](/docs/toolbox)
+### Equipment
+- [Coins](/docs/equipment/coins) — Currency and exchange
+- [Weapons](/docs/equipment/weapons) — Weapon properties and tables
+- [Armor](/docs/equipment/armor) — Armor types and AC
+- [Adventuring Gear](/docs/equipment/adventuring-gear) — Tools, kits, and supplies
+- [Mounts & Vehicles](/docs/equipment/mounts-and-vehicles) — Travel options
 
 ---
 
-## License
-
-This work includes material from the System Reference Document 5.2.1 by Wizards of the Coast LLC, available at [dndbeyond.com/srd](https://www.dndbeyond.com/srd). Licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode).
+Based on SRD 5.2.1 by Wizards of the Coast LLC, licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/).
