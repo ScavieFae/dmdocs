@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Remove ocean theme's blue gradient */
-body {
-  background-image: none !important;
-}
-
 /* ===== THEME COLORS ===== */
 
 /* Default/Brand - Gold (amber-shifted for light mode readability) */
