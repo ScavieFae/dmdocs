@@ -19,7 +19,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} ${jetbrainsMono.variable}`}>
-        <RootProvider>{children}</RootProvider>
+        <RootProvider
+          search={{
+            options: {
+              api: "/api/search",
+              tags: [
+                { name: "Rules", value: "Rules" },
+                { name: "Spells", value: "Spells" },
+                { name: "Monsters", value: "Monsters" },
+                { name: "Magic Items", value: "Magic Items" },
+              ],
+            },
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );

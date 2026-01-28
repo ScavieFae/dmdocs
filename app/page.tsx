@@ -84,11 +84,8 @@ export default function Home() {
                 >
                   {section.title}
                 </span>
-                <span className="hidden sm:inline text-sm text-fd-muted-foreground">
-                  {section.description}
-                </span>
               </div>
-              <p className="sm:hidden text-sm text-fd-muted-foreground mt-0.5 ml-6">
+              <p className="text-sm text-fd-muted-foreground mt-0.5 ml-6">
                 {section.description}
               </p>
             </div>
