@@ -1,0 +1,47 @@
+name: Link Check
+
+on:
+  pull_request:
+    paths:
+      - "content/**/*.mdx"
+      - "spellbook/**/*.mdx"
+      - "bestiary/**/*.mdx"
+      - "magicitems/**/*.mdx"
+      - "app/**/*.tsx"
+  schedule:
+    # Weekly on Sundays at 06:00 UTC — catches external URL rot
+    - cron: "0 6 * * 0"
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: lychee-cache-${{ github.sha }}
+          restore-keys: lychee-cache-
+
+      - name: Run lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .lychee.toml
+            'content/**/*.mdx'
+            'spellbook/**/*.mdx'
+            'bestiary/**/*.mdx'
+            'magicitems/**/*.mdx'
+            'app/**/*.tsx'
+          fail: true
+          output: /tmp/lychee-output.md
+
+      - name: Comment on PR with results
+        if: failure() && github.event_name == 'pull_request'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: link-check
+          path: /tmp/lychee-output.md

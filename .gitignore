@@ -40,3 +40,6 @@ next-env.d.ts
 
 # source PDFs (large files)
 /pdfs/
+
+# lychee link checker cache
+.lycheecache

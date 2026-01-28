@@ -1,0 +1,42 @@
+# Lychee link checker configuration
+# https://lychee.cli.rs/usage/config/
+#
+# Checks external URLs in MDX/MD/TSX files for link rot.
+#
+# Internal links (root-relative like /docs/classes/barbarian, and relative
+# like ./couatl) use Fumadocs routing conventions that don't map to bare
+# filesystem paths. Lychee needs --base-url to parse root-relative links,
+# so we point them at a placeholder domain and exclude it.
+#
+# Once the site has a real domain, replace the base_url and remove the
+# placeholder from the exclude list to get live internal link checking.
+
+# Base URL for resolving root-relative links in local files
+# Replace with real domain once deployed to enable internal link checking
+base_url = "https://dmdocs.local"
+
+# Accept these status codes (don't fail on redirects)
+accept = [200, 204, 301, 302]
+
+# Timeout per request
+timeout = 30
+
+# Max retries for failed requests
+max_retries = 2
+
+# Max concurrent requests
+max_concurrency = 16
+
+# Only check remote (http/https) links — skip file:// and relative path resolution
+scheme = ["https", "http"]
+
+# Exclude these URL patterns (regexes)
+exclude = [
+  "localhost",
+  "127\\.0\\.0\\.1",
+  "dmdocs\\.local",        # Placeholder for internal root-relative links (remove once deployed)
+  "dndbeyond\\.com",       # Rate-limits aggressively, false positives
+]
+
+# Cache results (speeds up repeated runs)
+cache = true
