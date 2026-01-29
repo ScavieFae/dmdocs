@@ -155,6 +155,29 @@ rm -rf .next .source && npm run dev
 
 Note: `.source` is Fumadocs' cache for MDX processing.
 
+### Internal Link URLs
+
+When writing links in MDX, use the **URL prefix**, not the directory name:
+
+| Directory | URL Prefix | Example Link |
+|-----------|------------|--------------|
+| `content/` | `/docs` | `[Rules Glossary](/docs/rules-glossary)` |
+| `spellbook/` | `/spellbook` | `[Fireball](/spellbook/evocation/fireball)` |
+| `bestiary/` | `/bestiary` | `[Red Dragon](/bestiary/dragon/red-dragon)` |
+| `magicitems/` | `/magicitems` | `[Bag of Holding](/magicitems/wondrous-items/bag-of-holding)` |
+
+**Common mistake:** `/rules-glossary` (wrong) vs `/docs/rules-glossary` (correct).
+
+Run `npm run validate-links` to catch broken internal links.
+
+### Search
+
+Search API at `/api/search` indexes all content with tag filtering.
+
+- **Tags:** Rules, Spells, Monsters, Magic Items
+- **Config:** `app/layout.tsx` (RootProvider search options)
+- **Endpoint:** `app/api/search/route.ts`
+
 ## Lessons Learned (Jan 2026)
 
 ### Navigation Architecture
@@ -319,8 +342,15 @@ Based on docs-ai-era research:
   - See: rnd-2026/coding/claude-code/allowed-tools.md for tool scoping
 - [ ] **Mobile responsiveness** — Fumadocs horizontal nav tabs get cut off on mobile (Magic Items not visible). Need to review:
   - Nav tab overflow/scrolling behavior
-  - General mobile layout testing
-  - Homepage card grid on small screens
+  - ~~Homepage card grid on small screens~~ (fixed: descriptions now stack below titles)
+- [ ] **Export builder** — Interactive UI where users select content slices and download structured data. Scope:
+  - **Selection modes**: All spells, spells by class, spells by school/level, all monsters, monsters by type/CR range, all magic items, items by rarity, etc.
+  - **Output formats**: JSON, YAML, TOML — user picks from a dropdown
+  - **Data shape**: Frontmatter fields (typed from Zod schemas) + page content as markdown text
+  - **Route**: `/export` page with a builder UI — checkboxes/dropdowns for filters, preview of selection count, download button
+  - **Implementation**: API route (`/api/export`) that queries the source loaders with filters, serializes to chosen format. Client-side UI with controlled form state.
+  - **Use cases**: LLM context loading, homebrew tools, VTT integration, offline reference
+  - **CC-BY-4.0 note**: Export should include attribution in output metadata
 
 ### Schema Limitation: Multi-Size Creatures
 

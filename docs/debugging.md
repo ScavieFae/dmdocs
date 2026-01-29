@@ -179,3 +179,58 @@ vercel --prod
 - MDX files: kebab-case (`rhythm-of-play.mdx`)
 - Navigation: defined in `meta.json` per folder
 - Section headers in root meta.json: `"---Section Name---"`
+
+---
+
+## Search API
+
+Search lives at `/api/search` using Fumadocs' `createSearchAPI('advanced')`.
+
+**How it works:**
+- Indexes all four content sources (docs, spellbook, bestiary, magicitems)
+- Uses `structuredData` from MDX processing for section-level search results
+- Supports tag filtering: `Rules`, `Spells`, `Monsters`, `Magic Items`
+
+**Key files:**
+- `app/api/search/route.ts` — The search endpoint
+- `app/layout.tsx` — RootProvider wired with search config and tag definitions
+- `lib/source.ts` — Source loaders that feed the search index
+
+**Testing:**
+```bash
+curl "http://localhost:3000/api/search?query=fireball"
+curl "http://localhost:3000/api/search?query=fireball&tag=Spells"
+```
+
+---
+
+## Link Validation
+
+Run `npm run validate-links` to check all internal links in MDX files.
+
+**What it catches:**
+- Missing `/docs` prefix on content links (content/ maps to /docs/, not /)
+- Wrong relative paths (e.g., `../fiend/night-hag` when you need `../../fiend/night-hag`)
+- Links to pages that don't exist
+
+**URL mapping:**
+| Directory | URL Prefix |
+|-----------|------------|
+| `content/` | `/docs` |
+| `spellbook/` | `/spellbook` |
+| `bestiary/` | `/bestiary` |
+| `magicitems/` | `/magicitems` |
+
+Common mistake: linking to `/rules-glossary` instead of `/docs/rules-glossary`.
+
+---
+
+## Ocean Theme & Turbopack
+
+The site uses Fumadocs' ocean preset (`tailwind.config.ts`), which applies:
+- Blue-shifted dark theme colors (cards, borders, muted text)
+- A subtle blue gradient on the body background
+
+**Known quirk:** Turbopack dev mode doesn't fully render the ocean preset. The gradient and some color shifts don't appear locally but work correctly in production webpack builds.
+
+**Don't try to fix this.** Production is the source of truth. If you want to preview the exact production look, run `npm run build && npm start`.
